@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output = "./generated/userCilent"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("USER_DATABASE_URL")
+}
+
+model Users {
+    user_id     String  @id             @map("user_id")
+    user_pw     String                  @map("user_pw")
+    user_name   String          @unique @map("user_name")
+
+    Characters  Characters[]
+
+    @@map("Users")
+}
+
+model Characters {
+    character_id    Int     @id     @default(autoincrement())   @map("character_id")
+    User_id         String                                      @map("User_id")
+    character_name  String          @unique                     @map("character_name")
+    health          Int             @default(500)               @map("health")
+    power           Int             @default(100)               @map("power")
+    money           Int             @default(10000)             @map("money")
+
+    User Users  @relation(fields: [User_id], references: [user_id], onDelete: Cascade)
+    Inventory   Inventory[]
+    Equipment   Equipment[]
+
+    @@map("Characters")
+}
+
+model Inventory {
+    inventory_id    Int     @id     @default(autoincrement())   @map("inventory_id")
+    Character_id    Int                                         @map("Character_id")
+    item_code       Int                                         @map("item_code")
+    count           Int                                         @map("count")
+
+    Character Characters @relation(fields: [Character_id], references: [character_id], onDelete: Cascade)
+
+    @@map("Inventory")
+}
+
+model Equipment {
+    equipment_id    Int     @id     @default(autoincrement())   @map("equipment_id")
+    Character_id    Int                                         @map("Character_id")
+    item_code       Int                                         @map("item_code")
+
+    Character Characters @relation(fields: [Character_id], references: [character_id], onDelete: Cascade)
+
+    @@map("Equipment")
+}
