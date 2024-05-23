@@ -1,5 +1,6 @@
 import express from 'express';
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 import { userPrisma } from '../utils/prisma/user.cilent.js';
 
 const router = express.Router();
@@ -60,6 +61,41 @@ router.post('/sign-up', async (req, res, next) => {
     });
 
     return res.status(201).json({ user });
+  } catch (error) {
+    next(error);
+  }
+});
+
+// 로그인 API
+router.post('/sign-in', async (req, res, next) => {
+  try {
+    const { user_id, user_pw } = req.body;
+
+    const user = await userPrisma.users.findFirst({
+      where: {
+        user_id,
+      },
+    });
+    if (!user) {
+      return res.status(401).json({ message: '존재하지 않는 사용자입니다.' });
+    }
+
+    if (!(await bcrypt.compare(user_pw, user.user_pw))) {
+      return res.status(401).json({ message: '비밀번호가 일치하지 않습니다.' });
+    }
+
+    const token = jwt.sign(
+      {
+        user_id: user.user_id,
+      },
+      process.env.TOKEN_SECRET_KEY,
+      {
+        expiresIn: '1h',
+      }
+    );
+
+    res.cookie('authorization', `Bearer ${token}`);
+    return res.status(200).json({ token });
   } catch (error) {
     next(error);
   }
