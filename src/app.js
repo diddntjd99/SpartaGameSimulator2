@@ -4,7 +4,8 @@ import errorHandlerMiddleware from '../middlewares/error-handler.middleware.js';
 import UsersRouter from './routes/users.router.js';
 import CharactersRouter from './routes/characters.router.js';
 import ItemsRouter from './routes/items.router.js';
-import InventoryRouter from './routes/inventory.router.js';
+import InventoryRouter from './routes/inventorys.router.js';
+import EquipmentsRouter from './routes/equipments.router.js';
 import 'dotenv/config';
 
 const app = express();
@@ -14,7 +15,13 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api', [UsersRouter, CharactersRouter, ItemsRouter, InventoryRouter]);
+app.use('/api', [
+  UsersRouter,
+  CharactersRouter,
+  ItemsRouter,
+  InventoryRouter,
+  EquipmentsRouter,
+]);
 app.use(errorHandlerMiddleware);
 
 app.listen(PORT, () => {
