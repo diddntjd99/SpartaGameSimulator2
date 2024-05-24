@@ -23,9 +23,7 @@ router.post('/characters', authMiddleware, async (req, res, next) => {
       },
     });
     if (character) {
-      return res
-        .status(409)
-        .json({ message: '이미 존재하는 캐릭터 이름입니다.' });
+      return res.status(409).json({ message: '이미 존재하는 캐릭터입니다.' });
     }
 
     const createCharacter = await userPrisma.characters.create({

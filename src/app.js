@@ -3,6 +3,7 @@ import cookieParser from 'cookie-parser';
 import errorHandlerMiddleware from '../middlewares/error-handler.middleware.js';
 import UsersRouter from './routes/users.router.js';
 import CharactersRouter from './routes/characters.router.js';
+import ItemsRouter from './routes/items.router.js';
 import 'dotenv/config';
 
 const app = express();
@@ -12,7 +13,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api', [UsersRouter, CharactersRouter]);
+app.use('/api', [UsersRouter, CharactersRouter, ItemsRouter]);
 app.use(errorHandlerMiddleware);
 
 app.listen(PORT, () => {
