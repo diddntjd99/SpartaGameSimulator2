@@ -138,15 +138,13 @@ exports.Prisma.InventorysScalarFieldEnum = {
   inventory_id: 'inventory_id',
   Character_id: 'Character_id',
   item_code: 'item_code',
-  item_name: 'item_name',
   count: 'count'
 };
 
 exports.Prisma.EquipmentsScalarFieldEnum = {
   equipment_id: 'equipment_id',
   Character_id: 'Character_id',
-  item_code: 'item_code',
-  item_name: 'item_name'
+  item_code: 'item_code'
 };
 
 exports.Prisma.SortOrder = {

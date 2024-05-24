@@ -27,7 +27,6 @@ router.get('/characters/:character_id/equipments', async (req, res, next) => {
       },
       select: {
         item_code: true,
-        item_name: true,
       },
     });
     return res.status(200).json({ equipment });
@@ -101,7 +100,6 @@ router.post(
         data: {
           Character_id: +character_id,
           item_code,
-          item_name: item.item_name,
         },
       });
 

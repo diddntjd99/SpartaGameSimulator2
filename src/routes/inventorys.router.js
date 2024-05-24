@@ -65,7 +65,6 @@ router.post(
             data: {
               Character_id: +character_id,
               item_code,
-              item_name: item.item_name,
               count,
             },
           });
@@ -220,7 +219,6 @@ router.get(
         },
         select: {
           item_code: true,
-          item_name: true,
           count: true,
         },
       });

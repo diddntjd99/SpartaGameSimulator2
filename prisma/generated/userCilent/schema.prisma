@@ -40,11 +40,10 @@ model Characters {
 }
 
 model Inventorys {
-  inventory_id Int    @id @default(autoincrement()) @map("inventory_id")
-  Character_id Int    @map("Character_id")
-  item_code    Int    @unique @map("item_code")
-  item_name    String @unique @map("item_name")
-  count        Int    @map("count")
+  inventory_id Int @id @default(autoincrement()) @map("inventory_id")
+  Character_id Int @map("Character_id")
+  item_code    Int @unique @map("item_code")
+  count        Int @map("count")
 
   Character Characters @relation(fields: [Character_id], references: [character_id], onDelete: Cascade)
 
@@ -52,10 +51,9 @@ model Inventorys {
 }
 
 model Equipments {
-  equipment_id Int    @id @default(autoincrement()) @map("equipment_id")
-  Character_id Int    @map("Character_id")
-  item_code    Int    @unique @map("item_code")
-  item_name    String @unique @map("item_name")
+  equipment_id Int @id @default(autoincrement()) @map("equipment_id")
+  Character_id Int @map("Character_id")
+  item_code    Int @unique @map("item_code")
 
   Character Characters @relation(fields: [Character_id], references: [character_id], onDelete: Cascade)
 

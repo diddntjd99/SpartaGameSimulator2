@@ -1,5 +1,6 @@
 import express from 'express';
 import { gamePrisma } from '../utils/prisma/game.cilent.js';
+import { userPrisma } from '../utils/prisma/user.cilent.js';
 
 const router = express.Router();
 
@@ -81,6 +82,9 @@ router.patch('/items/:item_code', async (req, res, next) => {
       }
     }
 
+    let oldHealth = item.item_stat.health;
+    let oldPower = item.item_stat.power;
+
     const updateItem = await gamePrisma.items.update({
       data: {
         item_name,
@@ -89,6 +93,42 @@ router.patch('/items/:item_code', async (req, res, next) => {
       where: {
         item_code: +item_code,
       },
+    });
+
+    // 수정된 아이템을 끼고 있는 캐릭터가 있으면 해당 캐릭터의 스탯도 변동된 아이템 스탯이 적용
+    const equipments = await userPrisma.equipments.findMany({
+      where: {
+        item_code: +item_code,
+      },
+    });
+
+    equipments.forEach(async (equipment) => {
+      const character = await userPrisma.characters.findFirst({
+        where: {
+          character_id: equipment.Character_id,
+        },
+      });
+
+      let totalHealth = character.health;
+      let totalPower = character.power;
+      if (item_stat.health) {
+        totalHealth -= oldHealth;
+        totalHealth += item_stat.health;
+      }
+      if (item_stat.power) {
+        totalPower -= oldPower;
+        totalPower += item_stat.power;
+      }
+
+      await userPrisma.characters.update({
+        data: {
+          health: totalHealth,
+          power: totalPower,
+        },
+        where: {
+          character_id: equipment.Character_id,
+        },
+      });
     });
 
     return res.status(200).json({ updateItem });

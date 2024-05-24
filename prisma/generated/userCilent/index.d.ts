@@ -3139,7 +3139,6 @@ export namespace Prisma {
     inventory_id: number | null
     Character_id: number | null
     item_code: number | null
-    item_name: string | null
     count: number | null
   }
 
@@ -3147,7 +3146,6 @@ export namespace Prisma {
     inventory_id: number | null
     Character_id: number | null
     item_code: number | null
-    item_name: string | null
     count: number | null
   }
 
@@ -3155,7 +3153,6 @@ export namespace Prisma {
     inventory_id: number
     Character_id: number
     item_code: number
-    item_name: number
     count: number
     _all: number
   }
@@ -3179,7 +3176,6 @@ export namespace Prisma {
     inventory_id?: true
     Character_id?: true
     item_code?: true
-    item_name?: true
     count?: true
   }
 
@@ -3187,7 +3183,6 @@ export namespace Prisma {
     inventory_id?: true
     Character_id?: true
     item_code?: true
-    item_name?: true
     count?: true
   }
 
@@ -3195,7 +3190,6 @@ export namespace Prisma {
     inventory_id?: true
     Character_id?: true
     item_code?: true
-    item_name?: true
     count?: true
     _all?: true
   }
@@ -3290,7 +3284,6 @@ export namespace Prisma {
     inventory_id: number
     Character_id: number
     item_code: number
-    item_name: string
     count: number
     _count: InventorysCountAggregateOutputType | null
     _avg: InventorysAvgAggregateOutputType | null
@@ -3317,7 +3310,6 @@ export namespace Prisma {
     inventory_id?: boolean
     Character_id?: boolean
     item_code?: boolean
-    item_name?: boolean
     count?: boolean
     Character?: boolean | CharactersDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["inventorys"]>
@@ -3326,7 +3318,6 @@ export namespace Prisma {
     inventory_id?: boolean
     Character_id?: boolean
     item_code?: boolean
-    item_name?: boolean
     count?: boolean
   }
 
@@ -3345,7 +3336,6 @@ export namespace Prisma {
       inventory_id: number
       Character_id: number
       item_code: number
-      item_name: string
       count: number
     }, ExtArgs["result"]["inventorys"]>
     composites: {}
@@ -3745,7 +3735,6 @@ export namespace Prisma {
     readonly inventory_id: FieldRef<"Inventorys", 'Int'>
     readonly Character_id: FieldRef<"Inventorys", 'Int'>
     readonly item_code: FieldRef<"Inventorys", 'Int'>
-    readonly item_name: FieldRef<"Inventorys", 'String'>
     readonly count: FieldRef<"Inventorys", 'Int'>
   }
     
@@ -4088,21 +4077,18 @@ export namespace Prisma {
     equipment_id: number | null
     Character_id: number | null
     item_code: number | null
-    item_name: string | null
   }
 
   export type EquipmentsMaxAggregateOutputType = {
     equipment_id: number | null
     Character_id: number | null
     item_code: number | null
-    item_name: string | null
   }
 
   export type EquipmentsCountAggregateOutputType = {
     equipment_id: number
     Character_id: number
     item_code: number
-    item_name: number
     _all: number
   }
 
@@ -4123,21 +4109,18 @@ export namespace Prisma {
     equipment_id?: true
     Character_id?: true
     item_code?: true
-    item_name?: true
   }
 
   export type EquipmentsMaxAggregateInputType = {
     equipment_id?: true
     Character_id?: true
     item_code?: true
-    item_name?: true
   }
 
   export type EquipmentsCountAggregateInputType = {
     equipment_id?: true
     Character_id?: true
     item_code?: true
-    item_name?: true
     _all?: true
   }
 
@@ -4231,7 +4214,6 @@ export namespace Prisma {
     equipment_id: number
     Character_id: number
     item_code: number
-    item_name: string
     _count: EquipmentsCountAggregateOutputType | null
     _avg: EquipmentsAvgAggregateOutputType | null
     _sum: EquipmentsSumAggregateOutputType | null
@@ -4257,7 +4239,6 @@ export namespace Prisma {
     equipment_id?: boolean
     Character_id?: boolean
     item_code?: boolean
-    item_name?: boolean
     Character?: boolean | CharactersDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["equipments"]>
 
@@ -4265,7 +4246,6 @@ export namespace Prisma {
     equipment_id?: boolean
     Character_id?: boolean
     item_code?: boolean
-    item_name?: boolean
   }
 
 
@@ -4283,7 +4263,6 @@ export namespace Prisma {
       equipment_id: number
       Character_id: number
       item_code: number
-      item_name: string
     }, ExtArgs["result"]["equipments"]>
     composites: {}
   }
@@ -4682,7 +4661,6 @@ export namespace Prisma {
     readonly equipment_id: FieldRef<"Equipments", 'Int'>
     readonly Character_id: FieldRef<"Equipments", 'Int'>
     readonly item_code: FieldRef<"Equipments", 'Int'>
-    readonly item_name: FieldRef<"Equipments", 'String'>
   }
     
 
@@ -5035,7 +5013,6 @@ export namespace Prisma {
     inventory_id: 'inventory_id',
     Character_id: 'Character_id',
     item_code: 'item_code',
-    item_name: 'item_name',
     count: 'count'
   };
 
@@ -5045,8 +5022,7 @@ export namespace Prisma {
   export const EquipmentsScalarFieldEnum: {
     equipment_id: 'equipment_id',
     Character_id: 'Character_id',
-    item_code: 'item_code',
-    item_name: 'item_name'
+    item_code: 'item_code'
   };
 
   export type EquipmentsScalarFieldEnum = (typeof EquipmentsScalarFieldEnum)[keyof typeof EquipmentsScalarFieldEnum]
@@ -5209,7 +5185,6 @@ export namespace Prisma {
     inventory_id?: IntFilter<"Inventorys"> | number
     Character_id?: IntFilter<"Inventorys"> | number
     item_code?: IntFilter<"Inventorys"> | number
-    item_name?: StringFilter<"Inventorys"> | string
     count?: IntFilter<"Inventorys"> | number
     Character?: XOR<CharactersRelationFilter, CharactersWhereInput>
   }
@@ -5218,7 +5193,6 @@ export namespace Prisma {
     inventory_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    item_name?: SortOrder
     count?: SortOrder
     Character?: CharactersOrderByWithRelationInput
   }
@@ -5226,20 +5200,18 @@ export namespace Prisma {
   export type InventorysWhereUniqueInput = Prisma.AtLeast<{
     inventory_id?: number
     item_code?: number
-    item_name?: string
     AND?: InventorysWhereInput | InventorysWhereInput[]
     OR?: InventorysWhereInput[]
     NOT?: InventorysWhereInput | InventorysWhereInput[]
     Character_id?: IntFilter<"Inventorys"> | number
     count?: IntFilter<"Inventorys"> | number
     Character?: XOR<CharactersRelationFilter, CharactersWhereInput>
-  }, "inventory_id" | "item_code" | "item_name">
+  }, "inventory_id" | "item_code">
 
   export type InventorysOrderByWithAggregationInput = {
     inventory_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    item_name?: SortOrder
     count?: SortOrder
     _count?: InventorysCountOrderByAggregateInput
     _avg?: InventorysAvgOrderByAggregateInput
@@ -5255,7 +5227,6 @@ export namespace Prisma {
     inventory_id?: IntWithAggregatesFilter<"Inventorys"> | number
     Character_id?: IntWithAggregatesFilter<"Inventorys"> | number
     item_code?: IntWithAggregatesFilter<"Inventorys"> | number
-    item_name?: StringWithAggregatesFilter<"Inventorys"> | string
     count?: IntWithAggregatesFilter<"Inventorys"> | number
   }
 
@@ -5266,7 +5237,6 @@ export namespace Prisma {
     equipment_id?: IntFilter<"Equipments"> | number
     Character_id?: IntFilter<"Equipments"> | number
     item_code?: IntFilter<"Equipments"> | number
-    item_name?: StringFilter<"Equipments"> | string
     Character?: XOR<CharactersRelationFilter, CharactersWhereInput>
   }
 
@@ -5274,26 +5244,23 @@ export namespace Prisma {
     equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    item_name?: SortOrder
     Character?: CharactersOrderByWithRelationInput
   }
 
   export type EquipmentsWhereUniqueInput = Prisma.AtLeast<{
     equipment_id?: number
     item_code?: number
-    item_name?: string
     AND?: EquipmentsWhereInput | EquipmentsWhereInput[]
     OR?: EquipmentsWhereInput[]
     NOT?: EquipmentsWhereInput | EquipmentsWhereInput[]
     Character_id?: IntFilter<"Equipments"> | number
     Character?: XOR<CharactersRelationFilter, CharactersWhereInput>
-  }, "equipment_id" | "item_code" | "item_name">
+  }, "equipment_id" | "item_code">
 
   export type EquipmentsOrderByWithAggregationInput = {
     equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    item_name?: SortOrder
     _count?: EquipmentsCountOrderByAggregateInput
     _avg?: EquipmentsAvgOrderByAggregateInput
     _max?: EquipmentsMaxOrderByAggregateInput
@@ -5308,7 +5275,6 @@ export namespace Prisma {
     equipment_id?: IntWithAggregatesFilter<"Equipments"> | number
     Character_id?: IntWithAggregatesFilter<"Equipments"> | number
     item_code?: IntWithAggregatesFilter<"Equipments"> | number
-    item_name?: StringWithAggregatesFilter<"Equipments"> | string
   }
 
   export type UsersCreateInput = {
@@ -5426,7 +5392,6 @@ export namespace Prisma {
 
   export type InventorysCreateInput = {
     item_code: number
-    item_name: string
     count: number
     Character: CharactersCreateNestedOneWithoutInventorysInput
   }
@@ -5435,13 +5400,11 @@ export namespace Prisma {
     inventory_id?: number
     Character_id: number
     item_code: number
-    item_name: string
     count: number
   }
 
   export type InventorysUpdateInput = {
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
     Character?: CharactersUpdateOneRequiredWithoutInventorysNestedInput
   }
@@ -5450,7 +5413,6 @@ export namespace Prisma {
     inventory_id?: IntFieldUpdateOperationsInput | number
     Character_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
@@ -5458,13 +5420,11 @@ export namespace Prisma {
     inventory_id?: number
     Character_id: number
     item_code: number
-    item_name: string
     count: number
   }
 
   export type InventorysUpdateManyMutationInput = {
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
@@ -5472,13 +5432,11 @@ export namespace Prisma {
     inventory_id?: IntFieldUpdateOperationsInput | number
     Character_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
   export type EquipmentsCreateInput = {
     item_code: number
-    item_name: string
     Character: CharactersCreateNestedOneWithoutEquipmentsInput
   }
 
@@ -5486,12 +5444,10 @@ export namespace Prisma {
     equipment_id?: number
     Character_id: number
     item_code: number
-    item_name: string
   }
 
   export type EquipmentsUpdateInput = {
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
     Character?: CharactersUpdateOneRequiredWithoutEquipmentsNestedInput
   }
 
@@ -5499,26 +5455,22 @@ export namespace Prisma {
     equipment_id?: IntFieldUpdateOperationsInput | number
     Character_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
   }
 
   export type EquipmentsCreateManyInput = {
     equipment_id?: number
     Character_id: number
     item_code: number
-    item_name: string
   }
 
   export type EquipmentsUpdateManyMutationInput = {
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
   }
 
   export type EquipmentsUncheckedUpdateManyInput = {
     equipment_id?: IntFieldUpdateOperationsInput | number
     Character_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -5682,7 +5634,6 @@ export namespace Prisma {
     inventory_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    item_name?: SortOrder
     count?: SortOrder
   }
 
@@ -5697,7 +5648,6 @@ export namespace Prisma {
     inventory_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    item_name?: SortOrder
     count?: SortOrder
   }
 
@@ -5705,7 +5655,6 @@ export namespace Prisma {
     inventory_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    item_name?: SortOrder
     count?: SortOrder
   }
 
@@ -5720,7 +5669,6 @@ export namespace Prisma {
     equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    item_name?: SortOrder
   }
 
   export type EquipmentsAvgOrderByAggregateInput = {
@@ -5733,14 +5681,12 @@ export namespace Prisma {
     equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    item_name?: SortOrder
   }
 
   export type EquipmentsMinOrderByAggregateInput = {
     equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    item_name?: SortOrder
   }
 
   export type EquipmentsSumOrderByAggregateInput = {
@@ -6074,14 +6020,12 @@ export namespace Prisma {
 
   export type InventorysCreateWithoutCharacterInput = {
     item_code: number
-    item_name: string
     count: number
   }
 
   export type InventorysUncheckedCreateWithoutCharacterInput = {
     inventory_id?: number
     item_code: number
-    item_name: string
     count: number
   }
 
@@ -6097,13 +6041,11 @@ export namespace Prisma {
 
   export type EquipmentsCreateWithoutCharacterInput = {
     item_code: number
-    item_name: string
   }
 
   export type EquipmentsUncheckedCreateWithoutCharacterInput = {
     equipment_id?: number
     item_code: number
-    item_name: string
   }
 
   export type EquipmentsCreateOrConnectWithoutCharacterInput = {
@@ -6162,7 +6104,6 @@ export namespace Prisma {
     inventory_id?: IntFilter<"Inventorys"> | number
     Character_id?: IntFilter<"Inventorys"> | number
     item_code?: IntFilter<"Inventorys"> | number
-    item_name?: StringFilter<"Inventorys"> | string
     count?: IntFilter<"Inventorys"> | number
   }
 
@@ -6189,7 +6130,6 @@ export namespace Prisma {
     equipment_id?: IntFilter<"Equipments"> | number
     Character_id?: IntFilter<"Equipments"> | number
     item_code?: IntFilter<"Equipments"> | number
-    item_name?: StringFilter<"Equipments"> | string
   }
 
   export type CharactersCreateWithoutInventorysInput = {
@@ -6338,51 +6278,43 @@ export namespace Prisma {
   export type InventorysCreateManyCharacterInput = {
     inventory_id?: number
     item_code: number
-    item_name: string
     count: number
   }
 
   export type EquipmentsCreateManyCharacterInput = {
     equipment_id?: number
     item_code: number
-    item_name: string
   }
 
   export type InventorysUpdateWithoutCharacterInput = {
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
   export type InventorysUncheckedUpdateWithoutCharacterInput = {
     inventory_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
   export type InventorysUncheckedUpdateManyWithoutCharacterInput = {
     inventory_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
   export type EquipmentsUpdateWithoutCharacterInput = {
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
   }
 
   export type EquipmentsUncheckedUpdateWithoutCharacterInput = {
     equipment_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
   }
 
   export type EquipmentsUncheckedUpdateManyWithoutCharacterInput = {
     equipment_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
-    item_name?: StringFieldUpdateOperationsInput | string
   }
 
 
