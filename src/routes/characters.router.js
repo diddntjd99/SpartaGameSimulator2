@@ -131,4 +131,47 @@ router.get(
   }
 );
 
+// 게임 머니 벌기 API
+router.patch(
+  '/characters/:character_id/showMeTheMoney',
+  authMiddleware,
+  async (req, res, next) => {
+    try {
+      const { character_id } = req.params;
+      const { user_id } = req.user;
+
+      const character = await userPrisma.characters.findFirst({
+        where: {
+          User_id: user_id,
+          character_id: +character_id,
+        },
+      });
+      if (!character) {
+        return res
+          .status(401)
+          .json({ message: '해당 캐릭터가 존재하지 않습니다.' });
+      }
+
+      const updateCharacter = await userPrisma.characters.update({
+        data: {
+          money: character.money + 100,
+        },
+        where: {
+          User_id: user_id,
+          character_id: +character_id,
+        },
+        select: {
+          character_id: true,
+          character_name: true,
+          money: true,
+        },
+      });
+
+      return res.status(200).json({ updateCharacter });
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+
 export default router;
