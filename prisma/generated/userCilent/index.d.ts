@@ -24,15 +24,15 @@ export type Users = $Result.DefaultSelection<Prisma.$UsersPayload>
  */
 export type Characters = $Result.DefaultSelection<Prisma.$CharactersPayload>
 /**
- * Model Inventory
+ * Model Inventorys
  * 
  */
-export type Inventory = $Result.DefaultSelection<Prisma.$InventoryPayload>
+export type Inventorys = $Result.DefaultSelection<Prisma.$InventorysPayload>
 /**
- * Model Equipment
+ * Model Equipments
  * 
  */
-export type Equipment = $Result.DefaultSelection<Prisma.$EquipmentPayload>
+export type Equipments = $Result.DefaultSelection<Prisma.$EquipmentsPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -177,24 +177,24 @@ export class PrismaClient<
   get characters(): Prisma.CharactersDelegate<ExtArgs>;
 
   /**
-   * `prisma.inventory`: Exposes CRUD operations for the **Inventory** model.
+   * `prisma.inventorys`: Exposes CRUD operations for the **Inventorys** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Inventories
-    * const inventories = await prisma.inventory.findMany()
+    * // Fetch zero or more Inventorys
+    * const inventorys = await prisma.inventorys.findMany()
     * ```
     */
-  get inventory(): Prisma.InventoryDelegate<ExtArgs>;
+  get inventorys(): Prisma.InventorysDelegate<ExtArgs>;
 
   /**
-   * `prisma.equipment`: Exposes CRUD operations for the **Equipment** model.
+   * `prisma.equipments`: Exposes CRUD operations for the **Equipments** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Equipment
-    * const equipment = await prisma.equipment.findMany()
+    * // Fetch zero or more Equipments
+    * const equipments = await prisma.equipments.findMany()
     * ```
     */
-  get equipment(): Prisma.EquipmentDelegate<ExtArgs>;
+  get equipments(): Prisma.EquipmentsDelegate<ExtArgs>;
 }
 
 export namespace Prisma {
@@ -674,8 +674,8 @@ export namespace Prisma {
   export const ModelName: {
     Users: 'Users',
     Characters: 'Characters',
-    Inventory: 'Inventory',
-    Equipment: 'Equipment'
+    Inventorys: 'Inventorys',
+    Equipments: 'Equipments'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -692,7 +692,7 @@ export namespace Prisma {
 
   export type TypeMap<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     meta: {
-      modelProps: 'users' | 'characters' | 'inventory' | 'equipment'
+      modelProps: 'users' | 'characters' | 'inventorys' | 'equipments'
       txIsolationLevel: Prisma.TransactionIsolationLevel
     },
     model: {
@@ -828,135 +828,135 @@ export namespace Prisma {
           }
         }
       }
-      Inventory: {
-        payload: Prisma.$InventoryPayload<ExtArgs>
-        fields: Prisma.InventoryFieldRefs
+      Inventorys: {
+        payload: Prisma.$InventorysPayload<ExtArgs>
+        fields: Prisma.InventorysFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.InventoryFindUniqueArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$InventoryPayload> | null
+            args: Prisma.InventorysFindUniqueArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$InventorysPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.InventoryFindUniqueOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$InventoryPayload>
+            args: Prisma.InventorysFindUniqueOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$InventorysPayload>
           }
           findFirst: {
-            args: Prisma.InventoryFindFirstArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$InventoryPayload> | null
+            args: Prisma.InventorysFindFirstArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$InventorysPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.InventoryFindFirstOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$InventoryPayload>
+            args: Prisma.InventorysFindFirstOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$InventorysPayload>
           }
           findMany: {
-            args: Prisma.InventoryFindManyArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$InventoryPayload>[]
+            args: Prisma.InventorysFindManyArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$InventorysPayload>[]
           }
           create: {
-            args: Prisma.InventoryCreateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$InventoryPayload>
+            args: Prisma.InventorysCreateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$InventorysPayload>
           }
           createMany: {
-            args: Prisma.InventoryCreateManyArgs<ExtArgs>,
+            args: Prisma.InventorysCreateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           delete: {
-            args: Prisma.InventoryDeleteArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$InventoryPayload>
+            args: Prisma.InventorysDeleteArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$InventorysPayload>
           }
           update: {
-            args: Prisma.InventoryUpdateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$InventoryPayload>
+            args: Prisma.InventorysUpdateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$InventorysPayload>
           }
           deleteMany: {
-            args: Prisma.InventoryDeleteManyArgs<ExtArgs>,
+            args: Prisma.InventorysDeleteManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           updateMany: {
-            args: Prisma.InventoryUpdateManyArgs<ExtArgs>,
+            args: Prisma.InventorysUpdateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           upsert: {
-            args: Prisma.InventoryUpsertArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$InventoryPayload>
+            args: Prisma.InventorysUpsertArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$InventorysPayload>
           }
           aggregate: {
-            args: Prisma.InventoryAggregateArgs<ExtArgs>,
-            result: $Utils.Optional<AggregateInventory>
+            args: Prisma.InventorysAggregateArgs<ExtArgs>,
+            result: $Utils.Optional<AggregateInventorys>
           }
           groupBy: {
-            args: Prisma.InventoryGroupByArgs<ExtArgs>,
-            result: $Utils.Optional<InventoryGroupByOutputType>[]
+            args: Prisma.InventorysGroupByArgs<ExtArgs>,
+            result: $Utils.Optional<InventorysGroupByOutputType>[]
           }
           count: {
-            args: Prisma.InventoryCountArgs<ExtArgs>,
-            result: $Utils.Optional<InventoryCountAggregateOutputType> | number
+            args: Prisma.InventorysCountArgs<ExtArgs>,
+            result: $Utils.Optional<InventorysCountAggregateOutputType> | number
           }
         }
       }
-      Equipment: {
-        payload: Prisma.$EquipmentPayload<ExtArgs>
-        fields: Prisma.EquipmentFieldRefs
+      Equipments: {
+        payload: Prisma.$EquipmentsPayload<ExtArgs>
+        fields: Prisma.EquipmentsFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.EquipmentFindUniqueArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$EquipmentPayload> | null
+            args: Prisma.EquipmentsFindUniqueArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$EquipmentsPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.EquipmentFindUniqueOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$EquipmentPayload>
+            args: Prisma.EquipmentsFindUniqueOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$EquipmentsPayload>
           }
           findFirst: {
-            args: Prisma.EquipmentFindFirstArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$EquipmentPayload> | null
+            args: Prisma.EquipmentsFindFirstArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$EquipmentsPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.EquipmentFindFirstOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$EquipmentPayload>
+            args: Prisma.EquipmentsFindFirstOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$EquipmentsPayload>
           }
           findMany: {
-            args: Prisma.EquipmentFindManyArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$EquipmentPayload>[]
+            args: Prisma.EquipmentsFindManyArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$EquipmentsPayload>[]
           }
           create: {
-            args: Prisma.EquipmentCreateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$EquipmentPayload>
+            args: Prisma.EquipmentsCreateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$EquipmentsPayload>
           }
           createMany: {
-            args: Prisma.EquipmentCreateManyArgs<ExtArgs>,
+            args: Prisma.EquipmentsCreateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           delete: {
-            args: Prisma.EquipmentDeleteArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$EquipmentPayload>
+            args: Prisma.EquipmentsDeleteArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$EquipmentsPayload>
           }
           update: {
-            args: Prisma.EquipmentUpdateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$EquipmentPayload>
+            args: Prisma.EquipmentsUpdateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$EquipmentsPayload>
           }
           deleteMany: {
-            args: Prisma.EquipmentDeleteManyArgs<ExtArgs>,
+            args: Prisma.EquipmentsDeleteManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           updateMany: {
-            args: Prisma.EquipmentUpdateManyArgs<ExtArgs>,
+            args: Prisma.EquipmentsUpdateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           upsert: {
-            args: Prisma.EquipmentUpsertArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$EquipmentPayload>
+            args: Prisma.EquipmentsUpsertArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$EquipmentsPayload>
           }
           aggregate: {
-            args: Prisma.EquipmentAggregateArgs<ExtArgs>,
-            result: $Utils.Optional<AggregateEquipment>
+            args: Prisma.EquipmentsAggregateArgs<ExtArgs>,
+            result: $Utils.Optional<AggregateEquipments>
           }
           groupBy: {
-            args: Prisma.EquipmentGroupByArgs<ExtArgs>,
-            result: $Utils.Optional<EquipmentGroupByOutputType>[]
+            args: Prisma.EquipmentsGroupByArgs<ExtArgs>,
+            result: $Utils.Optional<EquipmentsGroupByOutputType>[]
           }
           count: {
-            args: Prisma.EquipmentCountArgs<ExtArgs>,
-            result: $Utils.Optional<EquipmentCountAggregateOutputType> | number
+            args: Prisma.EquipmentsCountArgs<ExtArgs>,
+            result: $Utils.Optional<EquipmentsCountAggregateOutputType> | number
           }
         }
       }
@@ -1151,13 +1151,13 @@ export namespace Prisma {
    */
 
   export type CharactersCountOutputType = {
-    Inventory: number
-    Equipment: number
+    Inventorys: number
+    Equipments: number
   }
 
   export type CharactersCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    Inventory?: boolean | CharactersCountOutputTypeCountInventoryArgs
-    Equipment?: boolean | CharactersCountOutputTypeCountEquipmentArgs
+    Inventorys?: boolean | CharactersCountOutputTypeCountInventorysArgs
+    Equipments?: boolean | CharactersCountOutputTypeCountEquipmentsArgs
   }
 
   // Custom InputTypes
@@ -1174,15 +1174,15 @@ export namespace Prisma {
   /**
    * CharactersCountOutputType without action
    */
-  export type CharactersCountOutputTypeCountInventoryArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: InventoryWhereInput
+  export type CharactersCountOutputTypeCountInventorysArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: InventorysWhereInput
   }
 
   /**
    * CharactersCountOutputType without action
    */
-  export type CharactersCountOutputTypeCountEquipmentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: EquipmentWhereInput
+  export type CharactersCountOutputTypeCountEquipmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EquipmentsWhereInput
   }
 
 
@@ -2314,8 +2314,8 @@ export namespace Prisma {
     power?: boolean
     money?: boolean
     User?: boolean | UsersDefaultArgs<ExtArgs>
-    Inventory?: boolean | Characters$InventoryArgs<ExtArgs>
-    Equipment?: boolean | Characters$EquipmentArgs<ExtArgs>
+    Inventorys?: boolean | Characters$InventorysArgs<ExtArgs>
+    Equipments?: boolean | Characters$EquipmentsArgs<ExtArgs>
     _count?: boolean | CharactersCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["characters"]>
 
@@ -2331,8 +2331,8 @@ export namespace Prisma {
 
   export type CharactersInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     User?: boolean | UsersDefaultArgs<ExtArgs>
-    Inventory?: boolean | Characters$InventoryArgs<ExtArgs>
-    Equipment?: boolean | Characters$EquipmentArgs<ExtArgs>
+    Inventorys?: boolean | Characters$InventorysArgs<ExtArgs>
+    Equipments?: boolean | Characters$EquipmentsArgs<ExtArgs>
     _count?: boolean | CharactersCountOutputTypeDefaultArgs<ExtArgs>
   }
 
@@ -2341,8 +2341,8 @@ export namespace Prisma {
     name: "Characters"
     objects: {
       User: Prisma.$UsersPayload<ExtArgs>
-      Inventory: Prisma.$InventoryPayload<ExtArgs>[]
-      Equipment: Prisma.$EquipmentPayload<ExtArgs>[]
+      Inventorys: Prisma.$InventorysPayload<ExtArgs>[]
+      Equipments: Prisma.$EquipmentsPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       character_id: number
@@ -2718,9 +2718,9 @@ export namespace Prisma {
 
     User<T extends UsersDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UsersDefaultArgs<ExtArgs>>): Prisma__UsersClient<$Result.GetResult<Prisma.$UsersPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
 
-    Inventory<T extends Characters$InventoryArgs<ExtArgs> = {}>(args?: Subset<T, Characters$InventoryArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventoryPayload<ExtArgs>, T, 'findMany'> | Null>;
+    Inventorys<T extends Characters$InventorysArgs<ExtArgs> = {}>(args?: Subset<T, Characters$InventorysArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventorysPayload<ExtArgs>, T, 'findMany'> | Null>;
 
-    Equipment<T extends Characters$EquipmentArgs<ExtArgs> = {}>(args?: Subset<T, Characters$EquipmentArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EquipmentPayload<ExtArgs>, T, 'findMany'> | Null>;
+    Equipments<T extends Characters$EquipmentsArgs<ExtArgs> = {}>(args?: Subset<T, Characters$EquipmentsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EquipmentsPayload<ExtArgs>, T, 'findMany'> | Null>;
 
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -3055,43 +3055,43 @@ export namespace Prisma {
   }
 
   /**
-   * Characters.Inventory
+   * Characters.Inventorys
    */
-  export type Characters$InventoryArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Characters$InventorysArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Inventory
+     * Select specific fields to fetch from the Inventorys
      */
-    select?: InventorySelect<ExtArgs> | null
+    select?: InventorysSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: InventoryInclude<ExtArgs> | null
-    where?: InventoryWhereInput
-    orderBy?: InventoryOrderByWithRelationInput | InventoryOrderByWithRelationInput[]
-    cursor?: InventoryWhereUniqueInput
+    include?: InventorysInclude<ExtArgs> | null
+    where?: InventorysWhereInput
+    orderBy?: InventorysOrderByWithRelationInput | InventorysOrderByWithRelationInput[]
+    cursor?: InventorysWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: InventoryScalarFieldEnum | InventoryScalarFieldEnum[]
+    distinct?: InventorysScalarFieldEnum | InventorysScalarFieldEnum[]
   }
 
   /**
-   * Characters.Equipment
+   * Characters.Equipments
    */
-  export type Characters$EquipmentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Characters$EquipmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Equipment
+     * Select specific fields to fetch from the Equipments
      */
-    select?: EquipmentSelect<ExtArgs> | null
+    select?: EquipmentsSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: EquipmentInclude<ExtArgs> | null
-    where?: EquipmentWhereInput
-    orderBy?: EquipmentOrderByWithRelationInput | EquipmentOrderByWithRelationInput[]
-    cursor?: EquipmentWhereUniqueInput
+    include?: EquipmentsInclude<ExtArgs> | null
+    where?: EquipmentsWhereInput
+    orderBy?: EquipmentsOrderByWithRelationInput | EquipmentsOrderByWithRelationInput[]
+    cursor?: EquipmentsWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: EquipmentScalarFieldEnum | EquipmentScalarFieldEnum[]
+    distinct?: EquipmentsScalarFieldEnum | EquipmentsScalarFieldEnum[]
   }
 
   /**
@@ -3110,225 +3110,234 @@ export namespace Prisma {
 
 
   /**
-   * Model Inventory
+   * Model Inventorys
    */
 
-  export type AggregateInventory = {
-    _count: InventoryCountAggregateOutputType | null
-    _avg: InventoryAvgAggregateOutputType | null
-    _sum: InventorySumAggregateOutputType | null
-    _min: InventoryMinAggregateOutputType | null
-    _max: InventoryMaxAggregateOutputType | null
+  export type AggregateInventorys = {
+    _count: InventorysCountAggregateOutputType | null
+    _avg: InventorysAvgAggregateOutputType | null
+    _sum: InventorysSumAggregateOutputType | null
+    _min: InventorysMinAggregateOutputType | null
+    _max: InventorysMaxAggregateOutputType | null
   }
 
-  export type InventoryAvgAggregateOutputType = {
+  export type InventorysAvgAggregateOutputType = {
     inventory_id: number | null
     Character_id: number | null
     item_code: number | null
     count: number | null
   }
 
-  export type InventorySumAggregateOutputType = {
+  export type InventorysSumAggregateOutputType = {
     inventory_id: number | null
     Character_id: number | null
     item_code: number | null
     count: number | null
   }
 
-  export type InventoryMinAggregateOutputType = {
+  export type InventorysMinAggregateOutputType = {
     inventory_id: number | null
     Character_id: number | null
     item_code: number | null
+    item_name: string | null
     count: number | null
   }
 
-  export type InventoryMaxAggregateOutputType = {
+  export type InventorysMaxAggregateOutputType = {
     inventory_id: number | null
     Character_id: number | null
     item_code: number | null
+    item_name: string | null
     count: number | null
   }
 
-  export type InventoryCountAggregateOutputType = {
+  export type InventorysCountAggregateOutputType = {
     inventory_id: number
     Character_id: number
     item_code: number
+    item_name: number
     count: number
     _all: number
   }
 
 
-  export type InventoryAvgAggregateInputType = {
+  export type InventorysAvgAggregateInputType = {
     inventory_id?: true
     Character_id?: true
     item_code?: true
     count?: true
   }
 
-  export type InventorySumAggregateInputType = {
+  export type InventorysSumAggregateInputType = {
     inventory_id?: true
     Character_id?: true
     item_code?: true
     count?: true
   }
 
-  export type InventoryMinAggregateInputType = {
+  export type InventorysMinAggregateInputType = {
     inventory_id?: true
     Character_id?: true
     item_code?: true
+    item_name?: true
     count?: true
   }
 
-  export type InventoryMaxAggregateInputType = {
+  export type InventorysMaxAggregateInputType = {
     inventory_id?: true
     Character_id?: true
     item_code?: true
+    item_name?: true
     count?: true
   }
 
-  export type InventoryCountAggregateInputType = {
+  export type InventorysCountAggregateInputType = {
     inventory_id?: true
     Character_id?: true
     item_code?: true
+    item_name?: true
     count?: true
     _all?: true
   }
 
-  export type InventoryAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Inventory to aggregate.
+     * Filter which Inventorys to aggregate.
      */
-    where?: InventoryWhereInput
+    where?: InventorysWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Inventories to fetch.
+     * Determine the order of Inventorys to fetch.
      */
-    orderBy?: InventoryOrderByWithRelationInput | InventoryOrderByWithRelationInput[]
+    orderBy?: InventorysOrderByWithRelationInput | InventorysOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: InventoryWhereUniqueInput
+    cursor?: InventorysWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Inventories from the position of the cursor.
+     * Take `±n` Inventorys from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Inventories.
+     * Skip the first `n` Inventorys.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Inventories
+     * Count returned Inventorys
     **/
-    _count?: true | InventoryCountAggregateInputType
+    _count?: true | InventorysCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: InventoryAvgAggregateInputType
+    _avg?: InventorysAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: InventorySumAggregateInputType
+    _sum?: InventorysSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: InventoryMinAggregateInputType
+    _min?: InventorysMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: InventoryMaxAggregateInputType
+    _max?: InventorysMaxAggregateInputType
   }
 
-  export type GetInventoryAggregateType<T extends InventoryAggregateArgs> = {
-        [P in keyof T & keyof AggregateInventory]: P extends '_count' | 'count'
+  export type GetInventorysAggregateType<T extends InventorysAggregateArgs> = {
+        [P in keyof T & keyof AggregateInventorys]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateInventory[P]>
-      : GetScalarType<T[P], AggregateInventory[P]>
+        : GetScalarType<T[P], AggregateInventorys[P]>
+      : GetScalarType<T[P], AggregateInventorys[P]>
   }
 
 
 
 
-  export type InventoryGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: InventoryWhereInput
-    orderBy?: InventoryOrderByWithAggregationInput | InventoryOrderByWithAggregationInput[]
-    by: InventoryScalarFieldEnum[] | InventoryScalarFieldEnum
-    having?: InventoryScalarWhereWithAggregatesInput
+  export type InventorysGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: InventorysWhereInput
+    orderBy?: InventorysOrderByWithAggregationInput | InventorysOrderByWithAggregationInput[]
+    by: InventorysScalarFieldEnum[] | InventorysScalarFieldEnum
+    having?: InventorysScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: InventoryCountAggregateInputType | true
-    _avg?: InventoryAvgAggregateInputType
-    _sum?: InventorySumAggregateInputType
-    _min?: InventoryMinAggregateInputType
-    _max?: InventoryMaxAggregateInputType
+    _count?: InventorysCountAggregateInputType | true
+    _avg?: InventorysAvgAggregateInputType
+    _sum?: InventorysSumAggregateInputType
+    _min?: InventorysMinAggregateInputType
+    _max?: InventorysMaxAggregateInputType
   }
 
-  export type InventoryGroupByOutputType = {
+  export type InventorysGroupByOutputType = {
     inventory_id: number
     Character_id: number
     item_code: number
+    item_name: string
     count: number
-    _count: InventoryCountAggregateOutputType | null
-    _avg: InventoryAvgAggregateOutputType | null
-    _sum: InventorySumAggregateOutputType | null
-    _min: InventoryMinAggregateOutputType | null
-    _max: InventoryMaxAggregateOutputType | null
+    _count: InventorysCountAggregateOutputType | null
+    _avg: InventorysAvgAggregateOutputType | null
+    _sum: InventorysSumAggregateOutputType | null
+    _min: InventorysMinAggregateOutputType | null
+    _max: InventorysMaxAggregateOutputType | null
   }
 
-  type GetInventoryGroupByPayload<T extends InventoryGroupByArgs> = Prisma.PrismaPromise<
+  type GetInventorysGroupByPayload<T extends InventorysGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<InventoryGroupByOutputType, T['by']> &
+      PickEnumerable<InventorysGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof InventoryGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof InventorysGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], InventoryGroupByOutputType[P]>
-            : GetScalarType<T[P], InventoryGroupByOutputType[P]>
+              : GetScalarType<T[P], InventorysGroupByOutputType[P]>
+            : GetScalarType<T[P], InventorysGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type InventorySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type InventorysSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     inventory_id?: boolean
     Character_id?: boolean
     item_code?: boolean
+    item_name?: boolean
     count?: boolean
     Character?: boolean | CharactersDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["inventory"]>
+  }, ExtArgs["result"]["inventorys"]>
 
-  export type InventorySelectScalar = {
+  export type InventorysSelectScalar = {
     inventory_id?: boolean
     Character_id?: boolean
     item_code?: boolean
+    item_name?: boolean
     count?: boolean
   }
 
 
-  export type InventoryInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     Character?: boolean | CharactersDefaultArgs<ExtArgs>
   }
 
 
-  export type $InventoryPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Inventory"
+  export type $InventorysPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Inventorys"
     objects: {
       Character: Prisma.$CharactersPayload<ExtArgs>
     }
@@ -3336,161 +3345,162 @@ export namespace Prisma {
       inventory_id: number
       Character_id: number
       item_code: number
+      item_name: string
       count: number
-    }, ExtArgs["result"]["inventory"]>
+    }, ExtArgs["result"]["inventorys"]>
     composites: {}
   }
 
 
-  type InventoryGetPayload<S extends boolean | null | undefined | InventoryDefaultArgs> = $Result.GetResult<Prisma.$InventoryPayload, S>
+  type InventorysGetPayload<S extends boolean | null | undefined | InventorysDefaultArgs> = $Result.GetResult<Prisma.$InventorysPayload, S>
 
-  type InventoryCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<InventoryFindManyArgs, 'select' | 'include' | 'distinct'> & {
-      select?: InventoryCountAggregateInputType | true
+  type InventorysCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<InventorysFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: InventorysCountAggregateInputType | true
     }
 
-  export interface InventoryDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Inventory'], meta: { name: 'Inventory' } }
+  export interface InventorysDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Inventorys'], meta: { name: 'Inventorys' } }
     /**
-     * Find zero or one Inventory that matches the filter.
-     * @param {InventoryFindUniqueArgs} args - Arguments to find a Inventory
+     * Find zero or one Inventorys that matches the filter.
+     * @param {InventorysFindUniqueArgs} args - Arguments to find a Inventorys
      * @example
-     * // Get one Inventory
-     * const inventory = await prisma.inventory.findUnique({
+     * // Get one Inventorys
+     * const inventorys = await prisma.inventorys.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUnique<T extends InventoryFindUniqueArgs<ExtArgs>>(
-      args: SelectSubset<T, InventoryFindUniqueArgs<ExtArgs>>
-    ): Prisma__InventoryClient<$Result.GetResult<Prisma.$InventoryPayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
+    findUnique<T extends InventorysFindUniqueArgs<ExtArgs>>(
+      args: SelectSubset<T, InventorysFindUniqueArgs<ExtArgs>>
+    ): Prisma__InventorysClient<$Result.GetResult<Prisma.$InventorysPayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
 
     /**
-     * Find one Inventory that matches the filter or throw an error with `error.code='P2025'` 
+     * Find one Inventorys that matches the filter or throw an error with `error.code='P2025'` 
      * if no matches were found.
-     * @param {InventoryFindUniqueOrThrowArgs} args - Arguments to find a Inventory
+     * @param {InventorysFindUniqueOrThrowArgs} args - Arguments to find a Inventorys
      * @example
-     * // Get one Inventory
-     * const inventory = await prisma.inventory.findUniqueOrThrow({
+     * // Get one Inventorys
+     * const inventorys = await prisma.inventorys.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUniqueOrThrow<T extends InventoryFindUniqueOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, InventoryFindUniqueOrThrowArgs<ExtArgs>>
-    ): Prisma__InventoryClient<$Result.GetResult<Prisma.$InventoryPayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
+    findUniqueOrThrow<T extends InventorysFindUniqueOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, InventorysFindUniqueOrThrowArgs<ExtArgs>>
+    ): Prisma__InventorysClient<$Result.GetResult<Prisma.$InventorysPayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
 
     /**
-     * Find the first Inventory that matches the filter.
+     * Find the first Inventorys that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {InventoryFindFirstArgs} args - Arguments to find a Inventory
+     * @param {InventorysFindFirstArgs} args - Arguments to find a Inventorys
      * @example
-     * // Get one Inventory
-     * const inventory = await prisma.inventory.findFirst({
+     * // Get one Inventorys
+     * const inventorys = await prisma.inventorys.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirst<T extends InventoryFindFirstArgs<ExtArgs>>(
-      args?: SelectSubset<T, InventoryFindFirstArgs<ExtArgs>>
-    ): Prisma__InventoryClient<$Result.GetResult<Prisma.$InventoryPayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
+    findFirst<T extends InventorysFindFirstArgs<ExtArgs>>(
+      args?: SelectSubset<T, InventorysFindFirstArgs<ExtArgs>>
+    ): Prisma__InventorysClient<$Result.GetResult<Prisma.$InventorysPayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
 
     /**
-     * Find the first Inventory that matches the filter or
+     * Find the first Inventorys that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {InventoryFindFirstOrThrowArgs} args - Arguments to find a Inventory
+     * @param {InventorysFindFirstOrThrowArgs} args - Arguments to find a Inventorys
      * @example
-     * // Get one Inventory
-     * const inventory = await prisma.inventory.findFirstOrThrow({
+     * // Get one Inventorys
+     * const inventorys = await prisma.inventorys.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirstOrThrow<T extends InventoryFindFirstOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, InventoryFindFirstOrThrowArgs<ExtArgs>>
-    ): Prisma__InventoryClient<$Result.GetResult<Prisma.$InventoryPayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
+    findFirstOrThrow<T extends InventorysFindFirstOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, InventorysFindFirstOrThrowArgs<ExtArgs>>
+    ): Prisma__InventorysClient<$Result.GetResult<Prisma.$InventorysPayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
 
     /**
-     * Find zero or more Inventories that matches the filter.
+     * Find zero or more Inventorys that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {InventoryFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {InventorysFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Inventories
-     * const inventories = await prisma.inventory.findMany()
+     * // Get all Inventorys
+     * const inventorys = await prisma.inventorys.findMany()
      * 
-     * // Get first 10 Inventories
-     * const inventories = await prisma.inventory.findMany({ take: 10 })
+     * // Get first 10 Inventorys
+     * const inventorys = await prisma.inventorys.findMany({ take: 10 })
      * 
      * // Only select the `inventory_id`
-     * const inventoryWithInventory_idOnly = await prisma.inventory.findMany({ select: { inventory_id: true } })
+     * const inventorysWithInventory_idOnly = await prisma.inventorys.findMany({ select: { inventory_id: true } })
      * 
     **/
-    findMany<T extends InventoryFindManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, InventoryFindManyArgs<ExtArgs>>
-    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventoryPayload<ExtArgs>, T, 'findMany'>>
+    findMany<T extends InventorysFindManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, InventorysFindManyArgs<ExtArgs>>
+    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$InventorysPayload<ExtArgs>, T, 'findMany'>>
 
     /**
-     * Create a Inventory.
-     * @param {InventoryCreateArgs} args - Arguments to create a Inventory.
+     * Create a Inventorys.
+     * @param {InventorysCreateArgs} args - Arguments to create a Inventorys.
      * @example
-     * // Create one Inventory
-     * const Inventory = await prisma.inventory.create({
+     * // Create one Inventorys
+     * const Inventorys = await prisma.inventorys.create({
      *   data: {
-     *     // ... data to create a Inventory
+     *     // ... data to create a Inventorys
      *   }
      * })
      * 
     **/
-    create<T extends InventoryCreateArgs<ExtArgs>>(
-      args: SelectSubset<T, InventoryCreateArgs<ExtArgs>>
-    ): Prisma__InventoryClient<$Result.GetResult<Prisma.$InventoryPayload<ExtArgs>, T, 'create'>, never, ExtArgs>
+    create<T extends InventorysCreateArgs<ExtArgs>>(
+      args: SelectSubset<T, InventorysCreateArgs<ExtArgs>>
+    ): Prisma__InventorysClient<$Result.GetResult<Prisma.$InventorysPayload<ExtArgs>, T, 'create'>, never, ExtArgs>
 
     /**
-     * Create many Inventories.
-     * @param {InventoryCreateManyArgs} args - Arguments to create many Inventories.
+     * Create many Inventorys.
+     * @param {InventorysCreateManyArgs} args - Arguments to create many Inventorys.
      * @example
-     * // Create many Inventories
-     * const inventory = await prisma.inventory.createMany({
+     * // Create many Inventorys
+     * const inventorys = await prisma.inventorys.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
     **/
-    createMany<T extends InventoryCreateManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, InventoryCreateManyArgs<ExtArgs>>
+    createMany<T extends InventorysCreateManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, InventorysCreateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Delete a Inventory.
-     * @param {InventoryDeleteArgs} args - Arguments to delete one Inventory.
+     * Delete a Inventorys.
+     * @param {InventorysDeleteArgs} args - Arguments to delete one Inventorys.
      * @example
-     * // Delete one Inventory
-     * const Inventory = await prisma.inventory.delete({
+     * // Delete one Inventorys
+     * const Inventorys = await prisma.inventorys.delete({
      *   where: {
-     *     // ... filter to delete one Inventory
+     *     // ... filter to delete one Inventorys
      *   }
      * })
      * 
     **/
-    delete<T extends InventoryDeleteArgs<ExtArgs>>(
-      args: SelectSubset<T, InventoryDeleteArgs<ExtArgs>>
-    ): Prisma__InventoryClient<$Result.GetResult<Prisma.$InventoryPayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
+    delete<T extends InventorysDeleteArgs<ExtArgs>>(
+      args: SelectSubset<T, InventorysDeleteArgs<ExtArgs>>
+    ): Prisma__InventorysClient<$Result.GetResult<Prisma.$InventorysPayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
 
     /**
-     * Update one Inventory.
-     * @param {InventoryUpdateArgs} args - Arguments to update one Inventory.
+     * Update one Inventorys.
+     * @param {InventorysUpdateArgs} args - Arguments to update one Inventorys.
      * @example
-     * // Update one Inventory
-     * const inventory = await prisma.inventory.update({
+     * // Update one Inventorys
+     * const inventorys = await prisma.inventorys.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3500,34 +3510,34 @@ export namespace Prisma {
      * })
      * 
     **/
-    update<T extends InventoryUpdateArgs<ExtArgs>>(
-      args: SelectSubset<T, InventoryUpdateArgs<ExtArgs>>
-    ): Prisma__InventoryClient<$Result.GetResult<Prisma.$InventoryPayload<ExtArgs>, T, 'update'>, never, ExtArgs>
+    update<T extends InventorysUpdateArgs<ExtArgs>>(
+      args: SelectSubset<T, InventorysUpdateArgs<ExtArgs>>
+    ): Prisma__InventorysClient<$Result.GetResult<Prisma.$InventorysPayload<ExtArgs>, T, 'update'>, never, ExtArgs>
 
     /**
-     * Delete zero or more Inventories.
-     * @param {InventoryDeleteManyArgs} args - Arguments to filter Inventories to delete.
+     * Delete zero or more Inventorys.
+     * @param {InventorysDeleteManyArgs} args - Arguments to filter Inventorys to delete.
      * @example
-     * // Delete a few Inventories
-     * const { count } = await prisma.inventory.deleteMany({
+     * // Delete a few Inventorys
+     * const { count } = await prisma.inventorys.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
     **/
-    deleteMany<T extends InventoryDeleteManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, InventoryDeleteManyArgs<ExtArgs>>
+    deleteMany<T extends InventorysDeleteManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, InventorysDeleteManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Inventories.
+     * Update zero or more Inventorys.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {InventoryUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {InventorysUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Inventories
-     * const inventory = await prisma.inventory.updateMany({
+     * // Update many Inventorys
+     * const inventorys = await prisma.inventorys.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3537,59 +3547,59 @@ export namespace Prisma {
      * })
      * 
     **/
-    updateMany<T extends InventoryUpdateManyArgs<ExtArgs>>(
-      args: SelectSubset<T, InventoryUpdateManyArgs<ExtArgs>>
+    updateMany<T extends InventorysUpdateManyArgs<ExtArgs>>(
+      args: SelectSubset<T, InventorysUpdateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create or update one Inventory.
-     * @param {InventoryUpsertArgs} args - Arguments to update or create a Inventory.
+     * Create or update one Inventorys.
+     * @param {InventorysUpsertArgs} args - Arguments to update or create a Inventorys.
      * @example
-     * // Update or create a Inventory
-     * const inventory = await prisma.inventory.upsert({
+     * // Update or create a Inventorys
+     * const inventorys = await prisma.inventorys.upsert({
      *   create: {
-     *     // ... data to create a Inventory
+     *     // ... data to create a Inventorys
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Inventory we want to update
+     *     // ... the filter for the Inventorys we want to update
      *   }
      * })
     **/
-    upsert<T extends InventoryUpsertArgs<ExtArgs>>(
-      args: SelectSubset<T, InventoryUpsertArgs<ExtArgs>>
-    ): Prisma__InventoryClient<$Result.GetResult<Prisma.$InventoryPayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
+    upsert<T extends InventorysUpsertArgs<ExtArgs>>(
+      args: SelectSubset<T, InventorysUpsertArgs<ExtArgs>>
+    ): Prisma__InventorysClient<$Result.GetResult<Prisma.$InventorysPayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
 
     /**
-     * Count the number of Inventories.
+     * Count the number of Inventorys.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {InventoryCountArgs} args - Arguments to filter Inventories to count.
+     * @param {InventorysCountArgs} args - Arguments to filter Inventorys to count.
      * @example
-     * // Count the number of Inventories
-     * const count = await prisma.inventory.count({
+     * // Count the number of Inventorys
+     * const count = await prisma.inventorys.count({
      *   where: {
-     *     // ... the filter for the Inventories we want to count
+     *     // ... the filter for the Inventorys we want to count
      *   }
      * })
     **/
-    count<T extends InventoryCountArgs>(
-      args?: Subset<T, InventoryCountArgs>,
+    count<T extends InventorysCountArgs>(
+      args?: Subset<T, InventorysCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], InventoryCountAggregateOutputType>
+          : GetScalarType<T['select'], InventorysCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Inventory.
+     * Allows you to perform aggregations operations on a Inventorys.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {InventoryAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {InventorysAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -3609,13 +3619,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends InventoryAggregateArgs>(args: Subset<T, InventoryAggregateArgs>): Prisma.PrismaPromise<GetInventoryAggregateType<T>>
+    aggregate<T extends InventorysAggregateArgs>(args: Subset<T, InventorysAggregateArgs>): Prisma.PrismaPromise<GetInventorysAggregateType<T>>
 
     /**
-     * Group by Inventory.
+     * Group by Inventorys.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {InventoryGroupByArgs} args - Group by arguments.
+     * @param {InventorysGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -3630,14 +3640,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends InventoryGroupByArgs,
+      T extends InventorysGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: InventoryGroupByArgs['orderBy'] }
-        : { orderBy?: InventoryGroupByArgs['orderBy'] },
+        ? { orderBy: InventorysGroupByArgs['orderBy'] }
+        : { orderBy?: InventorysGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -3686,20 +3696,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, InventoryGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetInventoryGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, InventorysGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetInventorysGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Inventory model
+   * Fields of the Inventorys model
    */
-  readonly fields: InventoryFieldRefs;
+  readonly fields: InventorysFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Inventory.
+   * The delegate class that acts as a "Promise-like" for Inventorys.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__InventoryClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__InventorysClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: 'PrismaPromise';
 
     Character<T extends CharactersDefaultArgs<ExtArgs> = {}>(args?: Subset<T, CharactersDefaultArgs<ExtArgs>>): Prisma__CharactersClient<$Result.GetResult<Prisma.$CharactersPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
@@ -3729,533 +3739,543 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Inventory model
+   * Fields of the Inventorys model
    */ 
-  interface InventoryFieldRefs {
-    readonly inventory_id: FieldRef<"Inventory", 'Int'>
-    readonly Character_id: FieldRef<"Inventory", 'Int'>
-    readonly item_code: FieldRef<"Inventory", 'Int'>
-    readonly count: FieldRef<"Inventory", 'Int'>
+  interface InventorysFieldRefs {
+    readonly inventory_id: FieldRef<"Inventorys", 'Int'>
+    readonly Character_id: FieldRef<"Inventorys", 'Int'>
+    readonly item_code: FieldRef<"Inventorys", 'Int'>
+    readonly item_name: FieldRef<"Inventorys", 'String'>
+    readonly count: FieldRef<"Inventorys", 'Int'>
   }
     
 
   // Custom InputTypes
   /**
-   * Inventory findUnique
+   * Inventorys findUnique
    */
-  export type InventoryFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Inventory
+     * Select specific fields to fetch from the Inventorys
      */
-    select?: InventorySelect<ExtArgs> | null
+    select?: InventorysSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: InventoryInclude<ExtArgs> | null
+    include?: InventorysInclude<ExtArgs> | null
     /**
-     * Filter, which Inventory to fetch.
+     * Filter, which Inventorys to fetch.
      */
-    where: InventoryWhereUniqueInput
+    where: InventorysWhereUniqueInput
   }
 
   /**
-   * Inventory findUniqueOrThrow
+   * Inventorys findUniqueOrThrow
    */
-  export type InventoryFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Inventory
+     * Select specific fields to fetch from the Inventorys
      */
-    select?: InventorySelect<ExtArgs> | null
+    select?: InventorysSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: InventoryInclude<ExtArgs> | null
+    include?: InventorysInclude<ExtArgs> | null
     /**
-     * Filter, which Inventory to fetch.
+     * Filter, which Inventorys to fetch.
      */
-    where: InventoryWhereUniqueInput
+    where: InventorysWhereUniqueInput
   }
 
   /**
-   * Inventory findFirst
+   * Inventorys findFirst
    */
-  export type InventoryFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Inventory
+     * Select specific fields to fetch from the Inventorys
      */
-    select?: InventorySelect<ExtArgs> | null
+    select?: InventorysSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: InventoryInclude<ExtArgs> | null
+    include?: InventorysInclude<ExtArgs> | null
     /**
-     * Filter, which Inventory to fetch.
+     * Filter, which Inventorys to fetch.
      */
-    where?: InventoryWhereInput
+    where?: InventorysWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Inventories to fetch.
+     * Determine the order of Inventorys to fetch.
      */
-    orderBy?: InventoryOrderByWithRelationInput | InventoryOrderByWithRelationInput[]
+    orderBy?: InventorysOrderByWithRelationInput | InventorysOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Inventories.
+     * Sets the position for searching for Inventorys.
      */
-    cursor?: InventoryWhereUniqueInput
+    cursor?: InventorysWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Inventories from the position of the cursor.
+     * Take `±n` Inventorys from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Inventories.
+     * Skip the first `n` Inventorys.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Inventories.
+     * Filter by unique combinations of Inventorys.
      */
-    distinct?: InventoryScalarFieldEnum | InventoryScalarFieldEnum[]
+    distinct?: InventorysScalarFieldEnum | InventorysScalarFieldEnum[]
   }
 
   /**
-   * Inventory findFirstOrThrow
+   * Inventorys findFirstOrThrow
    */
-  export type InventoryFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Inventory
+     * Select specific fields to fetch from the Inventorys
      */
-    select?: InventorySelect<ExtArgs> | null
+    select?: InventorysSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: InventoryInclude<ExtArgs> | null
+    include?: InventorysInclude<ExtArgs> | null
     /**
-     * Filter, which Inventory to fetch.
+     * Filter, which Inventorys to fetch.
      */
-    where?: InventoryWhereInput
+    where?: InventorysWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Inventories to fetch.
+     * Determine the order of Inventorys to fetch.
      */
-    orderBy?: InventoryOrderByWithRelationInput | InventoryOrderByWithRelationInput[]
+    orderBy?: InventorysOrderByWithRelationInput | InventorysOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Inventories.
+     * Sets the position for searching for Inventorys.
      */
-    cursor?: InventoryWhereUniqueInput
+    cursor?: InventorysWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Inventories from the position of the cursor.
+     * Take `±n` Inventorys from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Inventories.
+     * Skip the first `n` Inventorys.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Inventories.
+     * Filter by unique combinations of Inventorys.
      */
-    distinct?: InventoryScalarFieldEnum | InventoryScalarFieldEnum[]
+    distinct?: InventorysScalarFieldEnum | InventorysScalarFieldEnum[]
   }
 
   /**
-   * Inventory findMany
+   * Inventorys findMany
    */
-  export type InventoryFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Inventory
+     * Select specific fields to fetch from the Inventorys
      */
-    select?: InventorySelect<ExtArgs> | null
+    select?: InventorysSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: InventoryInclude<ExtArgs> | null
+    include?: InventorysInclude<ExtArgs> | null
     /**
-     * Filter, which Inventories to fetch.
+     * Filter, which Inventorys to fetch.
      */
-    where?: InventoryWhereInput
+    where?: InventorysWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Inventories to fetch.
+     * Determine the order of Inventorys to fetch.
      */
-    orderBy?: InventoryOrderByWithRelationInput | InventoryOrderByWithRelationInput[]
+    orderBy?: InventorysOrderByWithRelationInput | InventorysOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Inventories.
+     * Sets the position for listing Inventorys.
      */
-    cursor?: InventoryWhereUniqueInput
+    cursor?: InventorysWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Inventories from the position of the cursor.
+     * Take `±n` Inventorys from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Inventories.
+     * Skip the first `n` Inventorys.
      */
     skip?: number
-    distinct?: InventoryScalarFieldEnum | InventoryScalarFieldEnum[]
+    distinct?: InventorysScalarFieldEnum | InventorysScalarFieldEnum[]
   }
 
   /**
-   * Inventory create
+   * Inventorys create
    */
-  export type InventoryCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Inventory
+     * Select specific fields to fetch from the Inventorys
      */
-    select?: InventorySelect<ExtArgs> | null
+    select?: InventorysSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: InventoryInclude<ExtArgs> | null
+    include?: InventorysInclude<ExtArgs> | null
     /**
-     * The data needed to create a Inventory.
+     * The data needed to create a Inventorys.
      */
-    data: XOR<InventoryCreateInput, InventoryUncheckedCreateInput>
+    data: XOR<InventorysCreateInput, InventorysUncheckedCreateInput>
   }
 
   /**
-   * Inventory createMany
+   * Inventorys createMany
    */
-  export type InventoryCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Inventories.
+     * The data used to create many Inventorys.
      */
-    data: InventoryCreateManyInput | InventoryCreateManyInput[]
+    data: InventorysCreateManyInput | InventorysCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Inventory update
+   * Inventorys update
    */
-  export type InventoryUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Inventory
+     * Select specific fields to fetch from the Inventorys
      */
-    select?: InventorySelect<ExtArgs> | null
+    select?: InventorysSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: InventoryInclude<ExtArgs> | null
+    include?: InventorysInclude<ExtArgs> | null
     /**
-     * The data needed to update a Inventory.
+     * The data needed to update a Inventorys.
      */
-    data: XOR<InventoryUpdateInput, InventoryUncheckedUpdateInput>
+    data: XOR<InventorysUpdateInput, InventorysUncheckedUpdateInput>
     /**
-     * Choose, which Inventory to update.
+     * Choose, which Inventorys to update.
      */
-    where: InventoryWhereUniqueInput
+    where: InventorysWhereUniqueInput
   }
 
   /**
-   * Inventory updateMany
+   * Inventorys updateMany
    */
-  export type InventoryUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Inventories.
+     * The data used to update Inventorys.
      */
-    data: XOR<InventoryUpdateManyMutationInput, InventoryUncheckedUpdateManyInput>
+    data: XOR<InventorysUpdateManyMutationInput, InventorysUncheckedUpdateManyInput>
     /**
-     * Filter which Inventories to update
+     * Filter which Inventorys to update
      */
-    where?: InventoryWhereInput
+    where?: InventorysWhereInput
   }
 
   /**
-   * Inventory upsert
+   * Inventorys upsert
    */
-  export type InventoryUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Inventory
+     * Select specific fields to fetch from the Inventorys
      */
-    select?: InventorySelect<ExtArgs> | null
+    select?: InventorysSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: InventoryInclude<ExtArgs> | null
+    include?: InventorysInclude<ExtArgs> | null
     /**
-     * The filter to search for the Inventory to update in case it exists.
+     * The filter to search for the Inventorys to update in case it exists.
      */
-    where: InventoryWhereUniqueInput
+    where: InventorysWhereUniqueInput
     /**
-     * In case the Inventory found by the `where` argument doesn't exist, create a new Inventory with this data.
+     * In case the Inventorys found by the `where` argument doesn't exist, create a new Inventorys with this data.
      */
-    create: XOR<InventoryCreateInput, InventoryUncheckedCreateInput>
+    create: XOR<InventorysCreateInput, InventorysUncheckedCreateInput>
     /**
-     * In case the Inventory was found with the provided `where` argument, update it with this data.
+     * In case the Inventorys was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<InventoryUpdateInput, InventoryUncheckedUpdateInput>
+    update: XOR<InventorysUpdateInput, InventorysUncheckedUpdateInput>
   }
 
   /**
-   * Inventory delete
+   * Inventorys delete
    */
-  export type InventoryDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Inventory
+     * Select specific fields to fetch from the Inventorys
      */
-    select?: InventorySelect<ExtArgs> | null
+    select?: InventorysSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: InventoryInclude<ExtArgs> | null
+    include?: InventorysInclude<ExtArgs> | null
     /**
-     * Filter which Inventory to delete.
+     * Filter which Inventorys to delete.
      */
-    where: InventoryWhereUniqueInput
+    where: InventorysWhereUniqueInput
   }
 
   /**
-   * Inventory deleteMany
+   * Inventorys deleteMany
    */
-  export type InventoryDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Inventories to delete
+     * Filter which Inventorys to delete
      */
-    where?: InventoryWhereInput
+    where?: InventorysWhereInput
   }
 
   /**
-   * Inventory without action
+   * Inventorys without action
    */
-  export type InventoryDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type InventorysDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Inventory
+     * Select specific fields to fetch from the Inventorys
      */
-    select?: InventorySelect<ExtArgs> | null
+    select?: InventorysSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: InventoryInclude<ExtArgs> | null
+    include?: InventorysInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model Equipment
+   * Model Equipments
    */
 
-  export type AggregateEquipment = {
-    _count: EquipmentCountAggregateOutputType | null
-    _avg: EquipmentAvgAggregateOutputType | null
-    _sum: EquipmentSumAggregateOutputType | null
-    _min: EquipmentMinAggregateOutputType | null
-    _max: EquipmentMaxAggregateOutputType | null
+  export type AggregateEquipments = {
+    _count: EquipmentsCountAggregateOutputType | null
+    _avg: EquipmentsAvgAggregateOutputType | null
+    _sum: EquipmentsSumAggregateOutputType | null
+    _min: EquipmentsMinAggregateOutputType | null
+    _max: EquipmentsMaxAggregateOutputType | null
   }
 
-  export type EquipmentAvgAggregateOutputType = {
+  export type EquipmentsAvgAggregateOutputType = {
     equipment_id: number | null
     Character_id: number | null
     item_code: number | null
   }
 
-  export type EquipmentSumAggregateOutputType = {
+  export type EquipmentsSumAggregateOutputType = {
     equipment_id: number | null
     Character_id: number | null
     item_code: number | null
   }
 
-  export type EquipmentMinAggregateOutputType = {
+  export type EquipmentsMinAggregateOutputType = {
     equipment_id: number | null
     Character_id: number | null
     item_code: number | null
+    item_name: string | null
   }
 
-  export type EquipmentMaxAggregateOutputType = {
+  export type EquipmentsMaxAggregateOutputType = {
     equipment_id: number | null
     Character_id: number | null
     item_code: number | null
+    item_name: string | null
   }
 
-  export type EquipmentCountAggregateOutputType = {
+  export type EquipmentsCountAggregateOutputType = {
     equipment_id: number
     Character_id: number
     item_code: number
+    item_name: number
     _all: number
   }
 
 
-  export type EquipmentAvgAggregateInputType = {
+  export type EquipmentsAvgAggregateInputType = {
     equipment_id?: true
     Character_id?: true
     item_code?: true
   }
 
-  export type EquipmentSumAggregateInputType = {
+  export type EquipmentsSumAggregateInputType = {
     equipment_id?: true
     Character_id?: true
     item_code?: true
   }
 
-  export type EquipmentMinAggregateInputType = {
+  export type EquipmentsMinAggregateInputType = {
     equipment_id?: true
     Character_id?: true
     item_code?: true
+    item_name?: true
   }
 
-  export type EquipmentMaxAggregateInputType = {
+  export type EquipmentsMaxAggregateInputType = {
     equipment_id?: true
     Character_id?: true
     item_code?: true
+    item_name?: true
   }
 
-  export type EquipmentCountAggregateInputType = {
+  export type EquipmentsCountAggregateInputType = {
     equipment_id?: true
     Character_id?: true
     item_code?: true
+    item_name?: true
     _all?: true
   }
 
-  export type EquipmentAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Equipment to aggregate.
+     * Filter which Equipments to aggregate.
      */
-    where?: EquipmentWhereInput
+    where?: EquipmentsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Equipment to fetch.
+     * Determine the order of Equipments to fetch.
      */
-    orderBy?: EquipmentOrderByWithRelationInput | EquipmentOrderByWithRelationInput[]
+    orderBy?: EquipmentsOrderByWithRelationInput | EquipmentsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: EquipmentWhereUniqueInput
+    cursor?: EquipmentsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Equipment from the position of the cursor.
+     * Take `±n` Equipments from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Equipment.
+     * Skip the first `n` Equipments.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Equipment
+     * Count returned Equipments
     **/
-    _count?: true | EquipmentCountAggregateInputType
+    _count?: true | EquipmentsCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: EquipmentAvgAggregateInputType
+    _avg?: EquipmentsAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: EquipmentSumAggregateInputType
+    _sum?: EquipmentsSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: EquipmentMinAggregateInputType
+    _min?: EquipmentsMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: EquipmentMaxAggregateInputType
+    _max?: EquipmentsMaxAggregateInputType
   }
 
-  export type GetEquipmentAggregateType<T extends EquipmentAggregateArgs> = {
-        [P in keyof T & keyof AggregateEquipment]: P extends '_count' | 'count'
+  export type GetEquipmentsAggregateType<T extends EquipmentsAggregateArgs> = {
+        [P in keyof T & keyof AggregateEquipments]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateEquipment[P]>
-      : GetScalarType<T[P], AggregateEquipment[P]>
+        : GetScalarType<T[P], AggregateEquipments[P]>
+      : GetScalarType<T[P], AggregateEquipments[P]>
   }
 
 
 
 
-  export type EquipmentGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: EquipmentWhereInput
-    orderBy?: EquipmentOrderByWithAggregationInput | EquipmentOrderByWithAggregationInput[]
-    by: EquipmentScalarFieldEnum[] | EquipmentScalarFieldEnum
-    having?: EquipmentScalarWhereWithAggregatesInput
+  export type EquipmentsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EquipmentsWhereInput
+    orderBy?: EquipmentsOrderByWithAggregationInput | EquipmentsOrderByWithAggregationInput[]
+    by: EquipmentsScalarFieldEnum[] | EquipmentsScalarFieldEnum
+    having?: EquipmentsScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: EquipmentCountAggregateInputType | true
-    _avg?: EquipmentAvgAggregateInputType
-    _sum?: EquipmentSumAggregateInputType
-    _min?: EquipmentMinAggregateInputType
-    _max?: EquipmentMaxAggregateInputType
+    _count?: EquipmentsCountAggregateInputType | true
+    _avg?: EquipmentsAvgAggregateInputType
+    _sum?: EquipmentsSumAggregateInputType
+    _min?: EquipmentsMinAggregateInputType
+    _max?: EquipmentsMaxAggregateInputType
   }
 
-  export type EquipmentGroupByOutputType = {
+  export type EquipmentsGroupByOutputType = {
     equipment_id: number
     Character_id: number
     item_code: number
-    _count: EquipmentCountAggregateOutputType | null
-    _avg: EquipmentAvgAggregateOutputType | null
-    _sum: EquipmentSumAggregateOutputType | null
-    _min: EquipmentMinAggregateOutputType | null
-    _max: EquipmentMaxAggregateOutputType | null
+    item_name: string
+    _count: EquipmentsCountAggregateOutputType | null
+    _avg: EquipmentsAvgAggregateOutputType | null
+    _sum: EquipmentsSumAggregateOutputType | null
+    _min: EquipmentsMinAggregateOutputType | null
+    _max: EquipmentsMaxAggregateOutputType | null
   }
 
-  type GetEquipmentGroupByPayload<T extends EquipmentGroupByArgs> = Prisma.PrismaPromise<
+  type GetEquipmentsGroupByPayload<T extends EquipmentsGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<EquipmentGroupByOutputType, T['by']> &
+      PickEnumerable<EquipmentsGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof EquipmentGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof EquipmentsGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], EquipmentGroupByOutputType[P]>
-            : GetScalarType<T[P], EquipmentGroupByOutputType[P]>
+              : GetScalarType<T[P], EquipmentsGroupByOutputType[P]>
+            : GetScalarType<T[P], EquipmentsGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type EquipmentSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type EquipmentsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     equipment_id?: boolean
     Character_id?: boolean
     item_code?: boolean
+    item_name?: boolean
     Character?: boolean | CharactersDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["equipment"]>
+  }, ExtArgs["result"]["equipments"]>
 
-  export type EquipmentSelectScalar = {
+  export type EquipmentsSelectScalar = {
     equipment_id?: boolean
     Character_id?: boolean
     item_code?: boolean
+    item_name?: boolean
   }
 
 
-  export type EquipmentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     Character?: boolean | CharactersDefaultArgs<ExtArgs>
   }
 
 
-  export type $EquipmentPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Equipment"
+  export type $EquipmentsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Equipments"
     objects: {
       Character: Prisma.$CharactersPayload<ExtArgs>
     }
@@ -4263,160 +4283,161 @@ export namespace Prisma {
       equipment_id: number
       Character_id: number
       item_code: number
-    }, ExtArgs["result"]["equipment"]>
+      item_name: string
+    }, ExtArgs["result"]["equipments"]>
     composites: {}
   }
 
 
-  type EquipmentGetPayload<S extends boolean | null | undefined | EquipmentDefaultArgs> = $Result.GetResult<Prisma.$EquipmentPayload, S>
+  type EquipmentsGetPayload<S extends boolean | null | undefined | EquipmentsDefaultArgs> = $Result.GetResult<Prisma.$EquipmentsPayload, S>
 
-  type EquipmentCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<EquipmentFindManyArgs, 'select' | 'include' | 'distinct'> & {
-      select?: EquipmentCountAggregateInputType | true
+  type EquipmentsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<EquipmentsFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: EquipmentsCountAggregateInputType | true
     }
 
-  export interface EquipmentDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Equipment'], meta: { name: 'Equipment' } }
+  export interface EquipmentsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Equipments'], meta: { name: 'Equipments' } }
     /**
-     * Find zero or one Equipment that matches the filter.
-     * @param {EquipmentFindUniqueArgs} args - Arguments to find a Equipment
+     * Find zero or one Equipments that matches the filter.
+     * @param {EquipmentsFindUniqueArgs} args - Arguments to find a Equipments
      * @example
-     * // Get one Equipment
-     * const equipment = await prisma.equipment.findUnique({
+     * // Get one Equipments
+     * const equipments = await prisma.equipments.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUnique<T extends EquipmentFindUniqueArgs<ExtArgs>>(
-      args: SelectSubset<T, EquipmentFindUniqueArgs<ExtArgs>>
-    ): Prisma__EquipmentClient<$Result.GetResult<Prisma.$EquipmentPayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
+    findUnique<T extends EquipmentsFindUniqueArgs<ExtArgs>>(
+      args: SelectSubset<T, EquipmentsFindUniqueArgs<ExtArgs>>
+    ): Prisma__EquipmentsClient<$Result.GetResult<Prisma.$EquipmentsPayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
 
     /**
-     * Find one Equipment that matches the filter or throw an error with `error.code='P2025'` 
+     * Find one Equipments that matches the filter or throw an error with `error.code='P2025'` 
      * if no matches were found.
-     * @param {EquipmentFindUniqueOrThrowArgs} args - Arguments to find a Equipment
+     * @param {EquipmentsFindUniqueOrThrowArgs} args - Arguments to find a Equipments
      * @example
-     * // Get one Equipment
-     * const equipment = await prisma.equipment.findUniqueOrThrow({
+     * // Get one Equipments
+     * const equipments = await prisma.equipments.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUniqueOrThrow<T extends EquipmentFindUniqueOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, EquipmentFindUniqueOrThrowArgs<ExtArgs>>
-    ): Prisma__EquipmentClient<$Result.GetResult<Prisma.$EquipmentPayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
+    findUniqueOrThrow<T extends EquipmentsFindUniqueOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, EquipmentsFindUniqueOrThrowArgs<ExtArgs>>
+    ): Prisma__EquipmentsClient<$Result.GetResult<Prisma.$EquipmentsPayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
 
     /**
-     * Find the first Equipment that matches the filter.
+     * Find the first Equipments that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {EquipmentFindFirstArgs} args - Arguments to find a Equipment
+     * @param {EquipmentsFindFirstArgs} args - Arguments to find a Equipments
      * @example
-     * // Get one Equipment
-     * const equipment = await prisma.equipment.findFirst({
+     * // Get one Equipments
+     * const equipments = await prisma.equipments.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirst<T extends EquipmentFindFirstArgs<ExtArgs>>(
-      args?: SelectSubset<T, EquipmentFindFirstArgs<ExtArgs>>
-    ): Prisma__EquipmentClient<$Result.GetResult<Prisma.$EquipmentPayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
+    findFirst<T extends EquipmentsFindFirstArgs<ExtArgs>>(
+      args?: SelectSubset<T, EquipmentsFindFirstArgs<ExtArgs>>
+    ): Prisma__EquipmentsClient<$Result.GetResult<Prisma.$EquipmentsPayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
 
     /**
-     * Find the first Equipment that matches the filter or
+     * Find the first Equipments that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {EquipmentFindFirstOrThrowArgs} args - Arguments to find a Equipment
+     * @param {EquipmentsFindFirstOrThrowArgs} args - Arguments to find a Equipments
      * @example
-     * // Get one Equipment
-     * const equipment = await prisma.equipment.findFirstOrThrow({
+     * // Get one Equipments
+     * const equipments = await prisma.equipments.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirstOrThrow<T extends EquipmentFindFirstOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, EquipmentFindFirstOrThrowArgs<ExtArgs>>
-    ): Prisma__EquipmentClient<$Result.GetResult<Prisma.$EquipmentPayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
+    findFirstOrThrow<T extends EquipmentsFindFirstOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, EquipmentsFindFirstOrThrowArgs<ExtArgs>>
+    ): Prisma__EquipmentsClient<$Result.GetResult<Prisma.$EquipmentsPayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
 
     /**
-     * Find zero or more Equipment that matches the filter.
+     * Find zero or more Equipments that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {EquipmentFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {EquipmentsFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Equipment
-     * const equipment = await prisma.equipment.findMany()
+     * // Get all Equipments
+     * const equipments = await prisma.equipments.findMany()
      * 
-     * // Get first 10 Equipment
-     * const equipment = await prisma.equipment.findMany({ take: 10 })
+     * // Get first 10 Equipments
+     * const equipments = await prisma.equipments.findMany({ take: 10 })
      * 
      * // Only select the `equipment_id`
-     * const equipmentWithEquipment_idOnly = await prisma.equipment.findMany({ select: { equipment_id: true } })
+     * const equipmentsWithEquipment_idOnly = await prisma.equipments.findMany({ select: { equipment_id: true } })
      * 
     **/
-    findMany<T extends EquipmentFindManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, EquipmentFindManyArgs<ExtArgs>>
-    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EquipmentPayload<ExtArgs>, T, 'findMany'>>
+    findMany<T extends EquipmentsFindManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, EquipmentsFindManyArgs<ExtArgs>>
+    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EquipmentsPayload<ExtArgs>, T, 'findMany'>>
 
     /**
-     * Create a Equipment.
-     * @param {EquipmentCreateArgs} args - Arguments to create a Equipment.
+     * Create a Equipments.
+     * @param {EquipmentsCreateArgs} args - Arguments to create a Equipments.
      * @example
-     * // Create one Equipment
-     * const Equipment = await prisma.equipment.create({
+     * // Create one Equipments
+     * const Equipments = await prisma.equipments.create({
      *   data: {
-     *     // ... data to create a Equipment
+     *     // ... data to create a Equipments
      *   }
      * })
      * 
     **/
-    create<T extends EquipmentCreateArgs<ExtArgs>>(
-      args: SelectSubset<T, EquipmentCreateArgs<ExtArgs>>
-    ): Prisma__EquipmentClient<$Result.GetResult<Prisma.$EquipmentPayload<ExtArgs>, T, 'create'>, never, ExtArgs>
+    create<T extends EquipmentsCreateArgs<ExtArgs>>(
+      args: SelectSubset<T, EquipmentsCreateArgs<ExtArgs>>
+    ): Prisma__EquipmentsClient<$Result.GetResult<Prisma.$EquipmentsPayload<ExtArgs>, T, 'create'>, never, ExtArgs>
 
     /**
-     * Create many Equipment.
-     * @param {EquipmentCreateManyArgs} args - Arguments to create many Equipment.
+     * Create many Equipments.
+     * @param {EquipmentsCreateManyArgs} args - Arguments to create many Equipments.
      * @example
-     * // Create many Equipment
-     * const equipment = await prisma.equipment.createMany({
+     * // Create many Equipments
+     * const equipments = await prisma.equipments.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
     **/
-    createMany<T extends EquipmentCreateManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, EquipmentCreateManyArgs<ExtArgs>>
+    createMany<T extends EquipmentsCreateManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, EquipmentsCreateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Delete a Equipment.
-     * @param {EquipmentDeleteArgs} args - Arguments to delete one Equipment.
+     * Delete a Equipments.
+     * @param {EquipmentsDeleteArgs} args - Arguments to delete one Equipments.
      * @example
-     * // Delete one Equipment
-     * const Equipment = await prisma.equipment.delete({
+     * // Delete one Equipments
+     * const Equipments = await prisma.equipments.delete({
      *   where: {
-     *     // ... filter to delete one Equipment
+     *     // ... filter to delete one Equipments
      *   }
      * })
      * 
     **/
-    delete<T extends EquipmentDeleteArgs<ExtArgs>>(
-      args: SelectSubset<T, EquipmentDeleteArgs<ExtArgs>>
-    ): Prisma__EquipmentClient<$Result.GetResult<Prisma.$EquipmentPayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
+    delete<T extends EquipmentsDeleteArgs<ExtArgs>>(
+      args: SelectSubset<T, EquipmentsDeleteArgs<ExtArgs>>
+    ): Prisma__EquipmentsClient<$Result.GetResult<Prisma.$EquipmentsPayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
 
     /**
-     * Update one Equipment.
-     * @param {EquipmentUpdateArgs} args - Arguments to update one Equipment.
+     * Update one Equipments.
+     * @param {EquipmentsUpdateArgs} args - Arguments to update one Equipments.
      * @example
-     * // Update one Equipment
-     * const equipment = await prisma.equipment.update({
+     * // Update one Equipments
+     * const equipments = await prisma.equipments.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4426,34 +4447,34 @@ export namespace Prisma {
      * })
      * 
     **/
-    update<T extends EquipmentUpdateArgs<ExtArgs>>(
-      args: SelectSubset<T, EquipmentUpdateArgs<ExtArgs>>
-    ): Prisma__EquipmentClient<$Result.GetResult<Prisma.$EquipmentPayload<ExtArgs>, T, 'update'>, never, ExtArgs>
+    update<T extends EquipmentsUpdateArgs<ExtArgs>>(
+      args: SelectSubset<T, EquipmentsUpdateArgs<ExtArgs>>
+    ): Prisma__EquipmentsClient<$Result.GetResult<Prisma.$EquipmentsPayload<ExtArgs>, T, 'update'>, never, ExtArgs>
 
     /**
-     * Delete zero or more Equipment.
-     * @param {EquipmentDeleteManyArgs} args - Arguments to filter Equipment to delete.
+     * Delete zero or more Equipments.
+     * @param {EquipmentsDeleteManyArgs} args - Arguments to filter Equipments to delete.
      * @example
-     * // Delete a few Equipment
-     * const { count } = await prisma.equipment.deleteMany({
+     * // Delete a few Equipments
+     * const { count } = await prisma.equipments.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
     **/
-    deleteMany<T extends EquipmentDeleteManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, EquipmentDeleteManyArgs<ExtArgs>>
+    deleteMany<T extends EquipmentsDeleteManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, EquipmentsDeleteManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Equipment.
+     * Update zero or more Equipments.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {EquipmentUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {EquipmentsUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Equipment
-     * const equipment = await prisma.equipment.updateMany({
+     * // Update many Equipments
+     * const equipments = await prisma.equipments.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4463,59 +4484,59 @@ export namespace Prisma {
      * })
      * 
     **/
-    updateMany<T extends EquipmentUpdateManyArgs<ExtArgs>>(
-      args: SelectSubset<T, EquipmentUpdateManyArgs<ExtArgs>>
+    updateMany<T extends EquipmentsUpdateManyArgs<ExtArgs>>(
+      args: SelectSubset<T, EquipmentsUpdateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create or update one Equipment.
-     * @param {EquipmentUpsertArgs} args - Arguments to update or create a Equipment.
+     * Create or update one Equipments.
+     * @param {EquipmentsUpsertArgs} args - Arguments to update or create a Equipments.
      * @example
-     * // Update or create a Equipment
-     * const equipment = await prisma.equipment.upsert({
+     * // Update or create a Equipments
+     * const equipments = await prisma.equipments.upsert({
      *   create: {
-     *     // ... data to create a Equipment
+     *     // ... data to create a Equipments
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Equipment we want to update
+     *     // ... the filter for the Equipments we want to update
      *   }
      * })
     **/
-    upsert<T extends EquipmentUpsertArgs<ExtArgs>>(
-      args: SelectSubset<T, EquipmentUpsertArgs<ExtArgs>>
-    ): Prisma__EquipmentClient<$Result.GetResult<Prisma.$EquipmentPayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
+    upsert<T extends EquipmentsUpsertArgs<ExtArgs>>(
+      args: SelectSubset<T, EquipmentsUpsertArgs<ExtArgs>>
+    ): Prisma__EquipmentsClient<$Result.GetResult<Prisma.$EquipmentsPayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
 
     /**
-     * Count the number of Equipment.
+     * Count the number of Equipments.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {EquipmentCountArgs} args - Arguments to filter Equipment to count.
+     * @param {EquipmentsCountArgs} args - Arguments to filter Equipments to count.
      * @example
-     * // Count the number of Equipment
-     * const count = await prisma.equipment.count({
+     * // Count the number of Equipments
+     * const count = await prisma.equipments.count({
      *   where: {
-     *     // ... the filter for the Equipment we want to count
+     *     // ... the filter for the Equipments we want to count
      *   }
      * })
     **/
-    count<T extends EquipmentCountArgs>(
-      args?: Subset<T, EquipmentCountArgs>,
+    count<T extends EquipmentsCountArgs>(
+      args?: Subset<T, EquipmentsCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], EquipmentCountAggregateOutputType>
+          : GetScalarType<T['select'], EquipmentsCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Equipment.
+     * Allows you to perform aggregations operations on a Equipments.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {EquipmentAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {EquipmentsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -4535,13 +4556,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends EquipmentAggregateArgs>(args: Subset<T, EquipmentAggregateArgs>): Prisma.PrismaPromise<GetEquipmentAggregateType<T>>
+    aggregate<T extends EquipmentsAggregateArgs>(args: Subset<T, EquipmentsAggregateArgs>): Prisma.PrismaPromise<GetEquipmentsAggregateType<T>>
 
     /**
-     * Group by Equipment.
+     * Group by Equipments.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {EquipmentGroupByArgs} args - Group by arguments.
+     * @param {EquipmentsGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -4556,14 +4577,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends EquipmentGroupByArgs,
+      T extends EquipmentsGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: EquipmentGroupByArgs['orderBy'] }
-        : { orderBy?: EquipmentGroupByArgs['orderBy'] },
+        ? { orderBy: EquipmentsGroupByArgs['orderBy'] }
+        : { orderBy?: EquipmentsGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -4612,20 +4633,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, EquipmentGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetEquipmentGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, EquipmentsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetEquipmentsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Equipment model
+   * Fields of the Equipments model
    */
-  readonly fields: EquipmentFieldRefs;
+  readonly fields: EquipmentsFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Equipment.
+   * The delegate class that acts as a "Promise-like" for Equipments.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__EquipmentClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__EquipmentsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: 'PrismaPromise';
 
     Character<T extends CharactersDefaultArgs<ExtArgs> = {}>(args?: Subset<T, CharactersDefaultArgs<ExtArgs>>): Prisma__CharactersClient<$Result.GetResult<Prisma.$CharactersPayload<ExtArgs>, T, 'findUniqueOrThrow'> | Null, Null, ExtArgs>;
@@ -4655,322 +4676,323 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Equipment model
+   * Fields of the Equipments model
    */ 
-  interface EquipmentFieldRefs {
-    readonly equipment_id: FieldRef<"Equipment", 'Int'>
-    readonly Character_id: FieldRef<"Equipment", 'Int'>
-    readonly item_code: FieldRef<"Equipment", 'Int'>
+  interface EquipmentsFieldRefs {
+    readonly equipment_id: FieldRef<"Equipments", 'Int'>
+    readonly Character_id: FieldRef<"Equipments", 'Int'>
+    readonly item_code: FieldRef<"Equipments", 'Int'>
+    readonly item_name: FieldRef<"Equipments", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Equipment findUnique
+   * Equipments findUnique
    */
-  export type EquipmentFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Equipment
+     * Select specific fields to fetch from the Equipments
      */
-    select?: EquipmentSelect<ExtArgs> | null
+    select?: EquipmentsSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: EquipmentInclude<ExtArgs> | null
+    include?: EquipmentsInclude<ExtArgs> | null
     /**
-     * Filter, which Equipment to fetch.
+     * Filter, which Equipments to fetch.
      */
-    where: EquipmentWhereUniqueInput
+    where: EquipmentsWhereUniqueInput
   }
 
   /**
-   * Equipment findUniqueOrThrow
+   * Equipments findUniqueOrThrow
    */
-  export type EquipmentFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Equipment
+     * Select specific fields to fetch from the Equipments
      */
-    select?: EquipmentSelect<ExtArgs> | null
+    select?: EquipmentsSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: EquipmentInclude<ExtArgs> | null
+    include?: EquipmentsInclude<ExtArgs> | null
     /**
-     * Filter, which Equipment to fetch.
+     * Filter, which Equipments to fetch.
      */
-    where: EquipmentWhereUniqueInput
+    where: EquipmentsWhereUniqueInput
   }
 
   /**
-   * Equipment findFirst
+   * Equipments findFirst
    */
-  export type EquipmentFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Equipment
+     * Select specific fields to fetch from the Equipments
      */
-    select?: EquipmentSelect<ExtArgs> | null
+    select?: EquipmentsSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: EquipmentInclude<ExtArgs> | null
+    include?: EquipmentsInclude<ExtArgs> | null
     /**
-     * Filter, which Equipment to fetch.
+     * Filter, which Equipments to fetch.
      */
-    where?: EquipmentWhereInput
+    where?: EquipmentsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Equipment to fetch.
+     * Determine the order of Equipments to fetch.
      */
-    orderBy?: EquipmentOrderByWithRelationInput | EquipmentOrderByWithRelationInput[]
+    orderBy?: EquipmentsOrderByWithRelationInput | EquipmentsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Equipment.
+     * Sets the position for searching for Equipments.
      */
-    cursor?: EquipmentWhereUniqueInput
+    cursor?: EquipmentsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Equipment from the position of the cursor.
+     * Take `±n` Equipments from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Equipment.
+     * Skip the first `n` Equipments.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Equipment.
+     * Filter by unique combinations of Equipments.
      */
-    distinct?: EquipmentScalarFieldEnum | EquipmentScalarFieldEnum[]
+    distinct?: EquipmentsScalarFieldEnum | EquipmentsScalarFieldEnum[]
   }
 
   /**
-   * Equipment findFirstOrThrow
+   * Equipments findFirstOrThrow
    */
-  export type EquipmentFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Equipment
+     * Select specific fields to fetch from the Equipments
      */
-    select?: EquipmentSelect<ExtArgs> | null
+    select?: EquipmentsSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: EquipmentInclude<ExtArgs> | null
+    include?: EquipmentsInclude<ExtArgs> | null
     /**
-     * Filter, which Equipment to fetch.
+     * Filter, which Equipments to fetch.
      */
-    where?: EquipmentWhereInput
+    where?: EquipmentsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Equipment to fetch.
+     * Determine the order of Equipments to fetch.
      */
-    orderBy?: EquipmentOrderByWithRelationInput | EquipmentOrderByWithRelationInput[]
+    orderBy?: EquipmentsOrderByWithRelationInput | EquipmentsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Equipment.
+     * Sets the position for searching for Equipments.
      */
-    cursor?: EquipmentWhereUniqueInput
+    cursor?: EquipmentsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Equipment from the position of the cursor.
+     * Take `±n` Equipments from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Equipment.
+     * Skip the first `n` Equipments.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Equipment.
+     * Filter by unique combinations of Equipments.
      */
-    distinct?: EquipmentScalarFieldEnum | EquipmentScalarFieldEnum[]
+    distinct?: EquipmentsScalarFieldEnum | EquipmentsScalarFieldEnum[]
   }
 
   /**
-   * Equipment findMany
+   * Equipments findMany
    */
-  export type EquipmentFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Equipment
+     * Select specific fields to fetch from the Equipments
      */
-    select?: EquipmentSelect<ExtArgs> | null
+    select?: EquipmentsSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: EquipmentInclude<ExtArgs> | null
+    include?: EquipmentsInclude<ExtArgs> | null
     /**
-     * Filter, which Equipment to fetch.
+     * Filter, which Equipments to fetch.
      */
-    where?: EquipmentWhereInput
+    where?: EquipmentsWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Equipment to fetch.
+     * Determine the order of Equipments to fetch.
      */
-    orderBy?: EquipmentOrderByWithRelationInput | EquipmentOrderByWithRelationInput[]
+    orderBy?: EquipmentsOrderByWithRelationInput | EquipmentsOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Equipment.
+     * Sets the position for listing Equipments.
      */
-    cursor?: EquipmentWhereUniqueInput
+    cursor?: EquipmentsWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Equipment from the position of the cursor.
+     * Take `±n` Equipments from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Equipment.
+     * Skip the first `n` Equipments.
      */
     skip?: number
-    distinct?: EquipmentScalarFieldEnum | EquipmentScalarFieldEnum[]
+    distinct?: EquipmentsScalarFieldEnum | EquipmentsScalarFieldEnum[]
   }
 
   /**
-   * Equipment create
+   * Equipments create
    */
-  export type EquipmentCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Equipment
+     * Select specific fields to fetch from the Equipments
      */
-    select?: EquipmentSelect<ExtArgs> | null
+    select?: EquipmentsSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: EquipmentInclude<ExtArgs> | null
+    include?: EquipmentsInclude<ExtArgs> | null
     /**
-     * The data needed to create a Equipment.
+     * The data needed to create a Equipments.
      */
-    data: XOR<EquipmentCreateInput, EquipmentUncheckedCreateInput>
+    data: XOR<EquipmentsCreateInput, EquipmentsUncheckedCreateInput>
   }
 
   /**
-   * Equipment createMany
+   * Equipments createMany
    */
-  export type EquipmentCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Equipment.
+     * The data used to create many Equipments.
      */
-    data: EquipmentCreateManyInput | EquipmentCreateManyInput[]
+    data: EquipmentsCreateManyInput | EquipmentsCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Equipment update
+   * Equipments update
    */
-  export type EquipmentUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Equipment
+     * Select specific fields to fetch from the Equipments
      */
-    select?: EquipmentSelect<ExtArgs> | null
+    select?: EquipmentsSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: EquipmentInclude<ExtArgs> | null
+    include?: EquipmentsInclude<ExtArgs> | null
     /**
-     * The data needed to update a Equipment.
+     * The data needed to update a Equipments.
      */
-    data: XOR<EquipmentUpdateInput, EquipmentUncheckedUpdateInput>
+    data: XOR<EquipmentsUpdateInput, EquipmentsUncheckedUpdateInput>
     /**
-     * Choose, which Equipment to update.
+     * Choose, which Equipments to update.
      */
-    where: EquipmentWhereUniqueInput
+    where: EquipmentsWhereUniqueInput
   }
 
   /**
-   * Equipment updateMany
+   * Equipments updateMany
    */
-  export type EquipmentUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Equipment.
+     * The data used to update Equipments.
      */
-    data: XOR<EquipmentUpdateManyMutationInput, EquipmentUncheckedUpdateManyInput>
+    data: XOR<EquipmentsUpdateManyMutationInput, EquipmentsUncheckedUpdateManyInput>
     /**
-     * Filter which Equipment to update
+     * Filter which Equipments to update
      */
-    where?: EquipmentWhereInput
+    where?: EquipmentsWhereInput
   }
 
   /**
-   * Equipment upsert
+   * Equipments upsert
    */
-  export type EquipmentUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Equipment
+     * Select specific fields to fetch from the Equipments
      */
-    select?: EquipmentSelect<ExtArgs> | null
+    select?: EquipmentsSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: EquipmentInclude<ExtArgs> | null
+    include?: EquipmentsInclude<ExtArgs> | null
     /**
-     * The filter to search for the Equipment to update in case it exists.
+     * The filter to search for the Equipments to update in case it exists.
      */
-    where: EquipmentWhereUniqueInput
+    where: EquipmentsWhereUniqueInput
     /**
-     * In case the Equipment found by the `where` argument doesn't exist, create a new Equipment with this data.
+     * In case the Equipments found by the `where` argument doesn't exist, create a new Equipments with this data.
      */
-    create: XOR<EquipmentCreateInput, EquipmentUncheckedCreateInput>
+    create: XOR<EquipmentsCreateInput, EquipmentsUncheckedCreateInput>
     /**
-     * In case the Equipment was found with the provided `where` argument, update it with this data.
+     * In case the Equipments was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<EquipmentUpdateInput, EquipmentUncheckedUpdateInput>
+    update: XOR<EquipmentsUpdateInput, EquipmentsUncheckedUpdateInput>
   }
 
   /**
-   * Equipment delete
+   * Equipments delete
    */
-  export type EquipmentDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Equipment
+     * Select specific fields to fetch from the Equipments
      */
-    select?: EquipmentSelect<ExtArgs> | null
+    select?: EquipmentsSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: EquipmentInclude<ExtArgs> | null
+    include?: EquipmentsInclude<ExtArgs> | null
     /**
-     * Filter which Equipment to delete.
+     * Filter which Equipments to delete.
      */
-    where: EquipmentWhereUniqueInput
+    where: EquipmentsWhereUniqueInput
   }
 
   /**
-   * Equipment deleteMany
+   * Equipments deleteMany
    */
-  export type EquipmentDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Equipment to delete
+     * Filter which Equipments to delete
      */
-    where?: EquipmentWhereInput
+    where?: EquipmentsWhereInput
   }
 
   /**
-   * Equipment without action
+   * Equipments without action
    */
-  export type EquipmentDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Equipment
+     * Select specific fields to fetch from the Equipments
      */
-    select?: EquipmentSelect<ExtArgs> | null
+    select?: EquipmentsSelect<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: EquipmentInclude<ExtArgs> | null
+    include?: EquipmentsInclude<ExtArgs> | null
   }
 
 
@@ -5009,23 +5031,25 @@ export namespace Prisma {
   export type CharactersScalarFieldEnum = (typeof CharactersScalarFieldEnum)[keyof typeof CharactersScalarFieldEnum]
 
 
-  export const InventoryScalarFieldEnum: {
+  export const InventorysScalarFieldEnum: {
     inventory_id: 'inventory_id',
     Character_id: 'Character_id',
     item_code: 'item_code',
+    item_name: 'item_name',
     count: 'count'
   };
 
-  export type InventoryScalarFieldEnum = (typeof InventoryScalarFieldEnum)[keyof typeof InventoryScalarFieldEnum]
+  export type InventorysScalarFieldEnum = (typeof InventorysScalarFieldEnum)[keyof typeof InventorysScalarFieldEnum]
 
 
-  export const EquipmentScalarFieldEnum: {
+  export const EquipmentsScalarFieldEnum: {
     equipment_id: 'equipment_id',
     Character_id: 'Character_id',
-    item_code: 'item_code'
+    item_code: 'item_code',
+    item_name: 'item_name'
   };
 
-  export type EquipmentScalarFieldEnum = (typeof EquipmentScalarFieldEnum)[keyof typeof EquipmentScalarFieldEnum]
+  export type EquipmentsScalarFieldEnum = (typeof EquipmentsScalarFieldEnum)[keyof typeof EquipmentsScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -5121,8 +5145,8 @@ export namespace Prisma {
     power?: IntFilter<"Characters"> | number
     money?: IntFilter<"Characters"> | number
     User?: XOR<UsersRelationFilter, UsersWhereInput>
-    Inventory?: InventoryListRelationFilter
-    Equipment?: EquipmentListRelationFilter
+    Inventorys?: InventorysListRelationFilter
+    Equipments?: EquipmentsListRelationFilter
   }
 
   export type CharactersOrderByWithRelationInput = {
@@ -5133,8 +5157,8 @@ export namespace Prisma {
     power?: SortOrder
     money?: SortOrder
     User?: UsersOrderByWithRelationInput
-    Inventory?: InventoryOrderByRelationAggregateInput
-    Equipment?: EquipmentOrderByRelationAggregateInput
+    Inventorys?: InventorysOrderByRelationAggregateInput
+    Equipments?: EquipmentsOrderByRelationAggregateInput
   }
 
   export type CharactersWhereUniqueInput = Prisma.AtLeast<{
@@ -5148,8 +5172,8 @@ export namespace Prisma {
     power?: IntFilter<"Characters"> | number
     money?: IntFilter<"Characters"> | number
     User?: XOR<UsersRelationFilter, UsersWhereInput>
-    Inventory?: InventoryListRelationFilter
-    Equipment?: EquipmentListRelationFilter
+    Inventorys?: InventorysListRelationFilter
+    Equipments?: EquipmentsListRelationFilter
   }, "character_id" | "character_name">
 
   export type CharactersOrderByWithAggregationInput = {
@@ -5178,103 +5202,113 @@ export namespace Prisma {
     money?: IntWithAggregatesFilter<"Characters"> | number
   }
 
-  export type InventoryWhereInput = {
-    AND?: InventoryWhereInput | InventoryWhereInput[]
-    OR?: InventoryWhereInput[]
-    NOT?: InventoryWhereInput | InventoryWhereInput[]
-    inventory_id?: IntFilter<"Inventory"> | number
-    Character_id?: IntFilter<"Inventory"> | number
-    item_code?: IntFilter<"Inventory"> | number
-    count?: IntFilter<"Inventory"> | number
+  export type InventorysWhereInput = {
+    AND?: InventorysWhereInput | InventorysWhereInput[]
+    OR?: InventorysWhereInput[]
+    NOT?: InventorysWhereInput | InventorysWhereInput[]
+    inventory_id?: IntFilter<"Inventorys"> | number
+    Character_id?: IntFilter<"Inventorys"> | number
+    item_code?: IntFilter<"Inventorys"> | number
+    item_name?: StringFilter<"Inventorys"> | string
+    count?: IntFilter<"Inventorys"> | number
     Character?: XOR<CharactersRelationFilter, CharactersWhereInput>
   }
 
-  export type InventoryOrderByWithRelationInput = {
+  export type InventorysOrderByWithRelationInput = {
     inventory_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
+    item_name?: SortOrder
     count?: SortOrder
     Character?: CharactersOrderByWithRelationInput
   }
 
-  export type InventoryWhereUniqueInput = Prisma.AtLeast<{
+  export type InventorysWhereUniqueInput = Prisma.AtLeast<{
     inventory_id?: number
-    AND?: InventoryWhereInput | InventoryWhereInput[]
-    OR?: InventoryWhereInput[]
-    NOT?: InventoryWhereInput | InventoryWhereInput[]
-    Character_id?: IntFilter<"Inventory"> | number
-    item_code?: IntFilter<"Inventory"> | number
-    count?: IntFilter<"Inventory"> | number
+    item_code?: number
+    item_name?: string
+    AND?: InventorysWhereInput | InventorysWhereInput[]
+    OR?: InventorysWhereInput[]
+    NOT?: InventorysWhereInput | InventorysWhereInput[]
+    Character_id?: IntFilter<"Inventorys"> | number
+    count?: IntFilter<"Inventorys"> | number
     Character?: XOR<CharactersRelationFilter, CharactersWhereInput>
-  }, "inventory_id">
+  }, "inventory_id" | "item_code" | "item_name">
 
-  export type InventoryOrderByWithAggregationInput = {
+  export type InventorysOrderByWithAggregationInput = {
     inventory_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
+    item_name?: SortOrder
     count?: SortOrder
-    _count?: InventoryCountOrderByAggregateInput
-    _avg?: InventoryAvgOrderByAggregateInput
-    _max?: InventoryMaxOrderByAggregateInput
-    _min?: InventoryMinOrderByAggregateInput
-    _sum?: InventorySumOrderByAggregateInput
+    _count?: InventorysCountOrderByAggregateInput
+    _avg?: InventorysAvgOrderByAggregateInput
+    _max?: InventorysMaxOrderByAggregateInput
+    _min?: InventorysMinOrderByAggregateInput
+    _sum?: InventorysSumOrderByAggregateInput
   }
 
-  export type InventoryScalarWhereWithAggregatesInput = {
-    AND?: InventoryScalarWhereWithAggregatesInput | InventoryScalarWhereWithAggregatesInput[]
-    OR?: InventoryScalarWhereWithAggregatesInput[]
-    NOT?: InventoryScalarWhereWithAggregatesInput | InventoryScalarWhereWithAggregatesInput[]
-    inventory_id?: IntWithAggregatesFilter<"Inventory"> | number
-    Character_id?: IntWithAggregatesFilter<"Inventory"> | number
-    item_code?: IntWithAggregatesFilter<"Inventory"> | number
-    count?: IntWithAggregatesFilter<"Inventory"> | number
+  export type InventorysScalarWhereWithAggregatesInput = {
+    AND?: InventorysScalarWhereWithAggregatesInput | InventorysScalarWhereWithAggregatesInput[]
+    OR?: InventorysScalarWhereWithAggregatesInput[]
+    NOT?: InventorysScalarWhereWithAggregatesInput | InventorysScalarWhereWithAggregatesInput[]
+    inventory_id?: IntWithAggregatesFilter<"Inventorys"> | number
+    Character_id?: IntWithAggregatesFilter<"Inventorys"> | number
+    item_code?: IntWithAggregatesFilter<"Inventorys"> | number
+    item_name?: StringWithAggregatesFilter<"Inventorys"> | string
+    count?: IntWithAggregatesFilter<"Inventorys"> | number
   }
 
-  export type EquipmentWhereInput = {
-    AND?: EquipmentWhereInput | EquipmentWhereInput[]
-    OR?: EquipmentWhereInput[]
-    NOT?: EquipmentWhereInput | EquipmentWhereInput[]
-    equipment_id?: IntFilter<"Equipment"> | number
-    Character_id?: IntFilter<"Equipment"> | number
-    item_code?: IntFilter<"Equipment"> | number
+  export type EquipmentsWhereInput = {
+    AND?: EquipmentsWhereInput | EquipmentsWhereInput[]
+    OR?: EquipmentsWhereInput[]
+    NOT?: EquipmentsWhereInput | EquipmentsWhereInput[]
+    equipment_id?: IntFilter<"Equipments"> | number
+    Character_id?: IntFilter<"Equipments"> | number
+    item_code?: IntFilter<"Equipments"> | number
+    item_name?: StringFilter<"Equipments"> | string
     Character?: XOR<CharactersRelationFilter, CharactersWhereInput>
   }
 
-  export type EquipmentOrderByWithRelationInput = {
+  export type EquipmentsOrderByWithRelationInput = {
     equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
+    item_name?: SortOrder
     Character?: CharactersOrderByWithRelationInput
   }
 
-  export type EquipmentWhereUniqueInput = Prisma.AtLeast<{
+  export type EquipmentsWhereUniqueInput = Prisma.AtLeast<{
     equipment_id?: number
-    AND?: EquipmentWhereInput | EquipmentWhereInput[]
-    OR?: EquipmentWhereInput[]
-    NOT?: EquipmentWhereInput | EquipmentWhereInput[]
-    Character_id?: IntFilter<"Equipment"> | number
-    item_code?: IntFilter<"Equipment"> | number
+    item_code?: number
+    item_name?: string
+    AND?: EquipmentsWhereInput | EquipmentsWhereInput[]
+    OR?: EquipmentsWhereInput[]
+    NOT?: EquipmentsWhereInput | EquipmentsWhereInput[]
+    Character_id?: IntFilter<"Equipments"> | number
     Character?: XOR<CharactersRelationFilter, CharactersWhereInput>
-  }, "equipment_id">
+  }, "equipment_id" | "item_code" | "item_name">
 
-  export type EquipmentOrderByWithAggregationInput = {
+  export type EquipmentsOrderByWithAggregationInput = {
     equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    _count?: EquipmentCountOrderByAggregateInput
-    _avg?: EquipmentAvgOrderByAggregateInput
-    _max?: EquipmentMaxOrderByAggregateInput
-    _min?: EquipmentMinOrderByAggregateInput
-    _sum?: EquipmentSumOrderByAggregateInput
+    item_name?: SortOrder
+    _count?: EquipmentsCountOrderByAggregateInput
+    _avg?: EquipmentsAvgOrderByAggregateInput
+    _max?: EquipmentsMaxOrderByAggregateInput
+    _min?: EquipmentsMinOrderByAggregateInput
+    _sum?: EquipmentsSumOrderByAggregateInput
   }
 
-  export type EquipmentScalarWhereWithAggregatesInput = {
-    AND?: EquipmentScalarWhereWithAggregatesInput | EquipmentScalarWhereWithAggregatesInput[]
-    OR?: EquipmentScalarWhereWithAggregatesInput[]
-    NOT?: EquipmentScalarWhereWithAggregatesInput | EquipmentScalarWhereWithAggregatesInput[]
-    equipment_id?: IntWithAggregatesFilter<"Equipment"> | number
-    Character_id?: IntWithAggregatesFilter<"Equipment"> | number
-    item_code?: IntWithAggregatesFilter<"Equipment"> | number
+  export type EquipmentsScalarWhereWithAggregatesInput = {
+    AND?: EquipmentsScalarWhereWithAggregatesInput | EquipmentsScalarWhereWithAggregatesInput[]
+    OR?: EquipmentsScalarWhereWithAggregatesInput[]
+    NOT?: EquipmentsScalarWhereWithAggregatesInput | EquipmentsScalarWhereWithAggregatesInput[]
+    equipment_id?: IntWithAggregatesFilter<"Equipments"> | number
+    Character_id?: IntWithAggregatesFilter<"Equipments"> | number
+    item_code?: IntWithAggregatesFilter<"Equipments"> | number
+    item_name?: StringWithAggregatesFilter<"Equipments"> | string
   }
 
   export type UsersCreateInput = {
@@ -5329,8 +5363,8 @@ export namespace Prisma {
     power?: number
     money?: number
     User: UsersCreateNestedOneWithoutCharactersInput
-    Inventory?: InventoryCreateNestedManyWithoutCharacterInput
-    Equipment?: EquipmentCreateNestedManyWithoutCharacterInput
+    Inventorys?: InventorysCreateNestedManyWithoutCharacterInput
+    Equipments?: EquipmentsCreateNestedManyWithoutCharacterInput
   }
 
   export type CharactersUncheckedCreateInput = {
@@ -5340,8 +5374,8 @@ export namespace Prisma {
     health?: number
     power?: number
     money?: number
-    Inventory?: InventoryUncheckedCreateNestedManyWithoutCharacterInput
-    Equipment?: EquipmentUncheckedCreateNestedManyWithoutCharacterInput
+    Inventorys?: InventorysUncheckedCreateNestedManyWithoutCharacterInput
+    Equipments?: EquipmentsUncheckedCreateNestedManyWithoutCharacterInput
   }
 
   export type CharactersUpdateInput = {
@@ -5350,8 +5384,8 @@ export namespace Prisma {
     power?: IntFieldUpdateOperationsInput | number
     money?: IntFieldUpdateOperationsInput | number
     User?: UsersUpdateOneRequiredWithoutCharactersNestedInput
-    Inventory?: InventoryUpdateManyWithoutCharacterNestedInput
-    Equipment?: EquipmentUpdateManyWithoutCharacterNestedInput
+    Inventorys?: InventorysUpdateManyWithoutCharacterNestedInput
+    Equipments?: EquipmentsUpdateManyWithoutCharacterNestedInput
   }
 
   export type CharactersUncheckedUpdateInput = {
@@ -5361,8 +5395,8 @@ export namespace Prisma {
     health?: IntFieldUpdateOperationsInput | number
     power?: IntFieldUpdateOperationsInput | number
     money?: IntFieldUpdateOperationsInput | number
-    Inventory?: InventoryUncheckedUpdateManyWithoutCharacterNestedInput
-    Equipment?: EquipmentUncheckedUpdateManyWithoutCharacterNestedInput
+    Inventorys?: InventorysUncheckedUpdateManyWithoutCharacterNestedInput
+    Equipments?: EquipmentsUncheckedUpdateManyWithoutCharacterNestedInput
   }
 
   export type CharactersCreateManyInput = {
@@ -5390,87 +5424,101 @@ export namespace Prisma {
     money?: IntFieldUpdateOperationsInput | number
   }
 
-  export type InventoryCreateInput = {
+  export type InventorysCreateInput = {
     item_code: number
+    item_name: string
     count: number
-    Character: CharactersCreateNestedOneWithoutInventoryInput
+    Character: CharactersCreateNestedOneWithoutInventorysInput
   }
 
-  export type InventoryUncheckedCreateInput = {
+  export type InventorysUncheckedCreateInput = {
     inventory_id?: number
     Character_id: number
     item_code: number
+    item_name: string
     count: number
   }
 
-  export type InventoryUpdateInput = {
+  export type InventorysUpdateInput = {
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
-    Character?: CharactersUpdateOneRequiredWithoutInventoryNestedInput
+    Character?: CharactersUpdateOneRequiredWithoutInventorysNestedInput
   }
 
-  export type InventoryUncheckedUpdateInput = {
+  export type InventorysUncheckedUpdateInput = {
     inventory_id?: IntFieldUpdateOperationsInput | number
     Character_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
-  export type InventoryCreateManyInput = {
+  export type InventorysCreateManyInput = {
     inventory_id?: number
     Character_id: number
     item_code: number
+    item_name: string
     count: number
   }
 
-  export type InventoryUpdateManyMutationInput = {
+  export type InventorysUpdateManyMutationInput = {
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
-  export type InventoryUncheckedUpdateManyInput = {
+  export type InventorysUncheckedUpdateManyInput = {
     inventory_id?: IntFieldUpdateOperationsInput | number
     Character_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
-  export type EquipmentCreateInput = {
+  export type EquipmentsCreateInput = {
     item_code: number
-    Character: CharactersCreateNestedOneWithoutEquipmentInput
+    item_name: string
+    Character: CharactersCreateNestedOneWithoutEquipmentsInput
   }
 
-  export type EquipmentUncheckedCreateInput = {
+  export type EquipmentsUncheckedCreateInput = {
     equipment_id?: number
     Character_id: number
     item_code: number
+    item_name: string
   }
 
-  export type EquipmentUpdateInput = {
+  export type EquipmentsUpdateInput = {
     item_code?: IntFieldUpdateOperationsInput | number
-    Character?: CharactersUpdateOneRequiredWithoutEquipmentNestedInput
+    item_name?: StringFieldUpdateOperationsInput | string
+    Character?: CharactersUpdateOneRequiredWithoutEquipmentsNestedInput
   }
 
-  export type EquipmentUncheckedUpdateInput = {
+  export type EquipmentsUncheckedUpdateInput = {
     equipment_id?: IntFieldUpdateOperationsInput | number
     Character_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
   }
 
-  export type EquipmentCreateManyInput = {
+  export type EquipmentsCreateManyInput = {
     equipment_id?: number
     Character_id: number
     item_code: number
+    item_name: string
   }
 
-  export type EquipmentUpdateManyMutationInput = {
+  export type EquipmentsUpdateManyMutationInput = {
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
   }
 
-  export type EquipmentUncheckedUpdateManyInput = {
+  export type EquipmentsUncheckedUpdateManyInput = {
     equipment_id?: IntFieldUpdateOperationsInput | number
     Character_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -5548,23 +5596,23 @@ export namespace Prisma {
     isNot?: UsersWhereInput
   }
 
-  export type InventoryListRelationFilter = {
-    every?: InventoryWhereInput
-    some?: InventoryWhereInput
-    none?: InventoryWhereInput
+  export type InventorysListRelationFilter = {
+    every?: InventorysWhereInput
+    some?: InventorysWhereInput
+    none?: InventorysWhereInput
   }
 
-  export type EquipmentListRelationFilter = {
-    every?: EquipmentWhereInput
-    some?: EquipmentWhereInput
-    none?: EquipmentWhereInput
+  export type EquipmentsListRelationFilter = {
+    every?: EquipmentsWhereInput
+    some?: EquipmentsWhereInput
+    none?: EquipmentsWhereInput
   }
 
-  export type InventoryOrderByRelationAggregateInput = {
+  export type InventorysOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type EquipmentOrderByRelationAggregateInput = {
+  export type EquipmentsOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -5630,66 +5678,72 @@ export namespace Prisma {
     isNot?: CharactersWhereInput
   }
 
-  export type InventoryCountOrderByAggregateInput = {
+  export type InventorysCountOrderByAggregateInput = {
+    inventory_id?: SortOrder
+    Character_id?: SortOrder
+    item_code?: SortOrder
+    item_name?: SortOrder
+    count?: SortOrder
+  }
+
+  export type InventorysAvgOrderByAggregateInput = {
     inventory_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
     count?: SortOrder
   }
 
-  export type InventoryAvgOrderByAggregateInput = {
+  export type InventorysMaxOrderByAggregateInput = {
+    inventory_id?: SortOrder
+    Character_id?: SortOrder
+    item_code?: SortOrder
+    item_name?: SortOrder
+    count?: SortOrder
+  }
+
+  export type InventorysMinOrderByAggregateInput = {
+    inventory_id?: SortOrder
+    Character_id?: SortOrder
+    item_code?: SortOrder
+    item_name?: SortOrder
+    count?: SortOrder
+  }
+
+  export type InventorysSumOrderByAggregateInput = {
     inventory_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
     count?: SortOrder
   }
 
-  export type InventoryMaxOrderByAggregateInput = {
-    inventory_id?: SortOrder
+  export type EquipmentsCountOrderByAggregateInput = {
+    equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
-    count?: SortOrder
+    item_name?: SortOrder
   }
 
-  export type InventoryMinOrderByAggregateInput = {
-    inventory_id?: SortOrder
-    Character_id?: SortOrder
-    item_code?: SortOrder
-    count?: SortOrder
-  }
-
-  export type InventorySumOrderByAggregateInput = {
-    inventory_id?: SortOrder
-    Character_id?: SortOrder
-    item_code?: SortOrder
-    count?: SortOrder
-  }
-
-  export type EquipmentCountOrderByAggregateInput = {
+  export type EquipmentsAvgOrderByAggregateInput = {
     equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
   }
 
-  export type EquipmentAvgOrderByAggregateInput = {
+  export type EquipmentsMaxOrderByAggregateInput = {
     equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
+    item_name?: SortOrder
   }
 
-  export type EquipmentMaxOrderByAggregateInput = {
+  export type EquipmentsMinOrderByAggregateInput = {
     equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
+    item_name?: SortOrder
   }
 
-  export type EquipmentMinOrderByAggregateInput = {
-    equipment_id?: SortOrder
-    Character_id?: SortOrder
-    item_code?: SortOrder
-  }
-
-  export type EquipmentSumOrderByAggregateInput = {
+  export type EquipmentsSumOrderByAggregateInput = {
     equipment_id?: SortOrder
     Character_id?: SortOrder
     item_code?: SortOrder
@@ -5747,32 +5801,32 @@ export namespace Prisma {
     connect?: UsersWhereUniqueInput
   }
 
-  export type InventoryCreateNestedManyWithoutCharacterInput = {
-    create?: XOR<InventoryCreateWithoutCharacterInput, InventoryUncheckedCreateWithoutCharacterInput> | InventoryCreateWithoutCharacterInput[] | InventoryUncheckedCreateWithoutCharacterInput[]
-    connectOrCreate?: InventoryCreateOrConnectWithoutCharacterInput | InventoryCreateOrConnectWithoutCharacterInput[]
-    createMany?: InventoryCreateManyCharacterInputEnvelope
-    connect?: InventoryWhereUniqueInput | InventoryWhereUniqueInput[]
+  export type InventorysCreateNestedManyWithoutCharacterInput = {
+    create?: XOR<InventorysCreateWithoutCharacterInput, InventorysUncheckedCreateWithoutCharacterInput> | InventorysCreateWithoutCharacterInput[] | InventorysUncheckedCreateWithoutCharacterInput[]
+    connectOrCreate?: InventorysCreateOrConnectWithoutCharacterInput | InventorysCreateOrConnectWithoutCharacterInput[]
+    createMany?: InventorysCreateManyCharacterInputEnvelope
+    connect?: InventorysWhereUniqueInput | InventorysWhereUniqueInput[]
   }
 
-  export type EquipmentCreateNestedManyWithoutCharacterInput = {
-    create?: XOR<EquipmentCreateWithoutCharacterInput, EquipmentUncheckedCreateWithoutCharacterInput> | EquipmentCreateWithoutCharacterInput[] | EquipmentUncheckedCreateWithoutCharacterInput[]
-    connectOrCreate?: EquipmentCreateOrConnectWithoutCharacterInput | EquipmentCreateOrConnectWithoutCharacterInput[]
-    createMany?: EquipmentCreateManyCharacterInputEnvelope
-    connect?: EquipmentWhereUniqueInput | EquipmentWhereUniqueInput[]
+  export type EquipmentsCreateNestedManyWithoutCharacterInput = {
+    create?: XOR<EquipmentsCreateWithoutCharacterInput, EquipmentsUncheckedCreateWithoutCharacterInput> | EquipmentsCreateWithoutCharacterInput[] | EquipmentsUncheckedCreateWithoutCharacterInput[]
+    connectOrCreate?: EquipmentsCreateOrConnectWithoutCharacterInput | EquipmentsCreateOrConnectWithoutCharacterInput[]
+    createMany?: EquipmentsCreateManyCharacterInputEnvelope
+    connect?: EquipmentsWhereUniqueInput | EquipmentsWhereUniqueInput[]
   }
 
-  export type InventoryUncheckedCreateNestedManyWithoutCharacterInput = {
-    create?: XOR<InventoryCreateWithoutCharacterInput, InventoryUncheckedCreateWithoutCharacterInput> | InventoryCreateWithoutCharacterInput[] | InventoryUncheckedCreateWithoutCharacterInput[]
-    connectOrCreate?: InventoryCreateOrConnectWithoutCharacterInput | InventoryCreateOrConnectWithoutCharacterInput[]
-    createMany?: InventoryCreateManyCharacterInputEnvelope
-    connect?: InventoryWhereUniqueInput | InventoryWhereUniqueInput[]
+  export type InventorysUncheckedCreateNestedManyWithoutCharacterInput = {
+    create?: XOR<InventorysCreateWithoutCharacterInput, InventorysUncheckedCreateWithoutCharacterInput> | InventorysCreateWithoutCharacterInput[] | InventorysUncheckedCreateWithoutCharacterInput[]
+    connectOrCreate?: InventorysCreateOrConnectWithoutCharacterInput | InventorysCreateOrConnectWithoutCharacterInput[]
+    createMany?: InventorysCreateManyCharacterInputEnvelope
+    connect?: InventorysWhereUniqueInput | InventorysWhereUniqueInput[]
   }
 
-  export type EquipmentUncheckedCreateNestedManyWithoutCharacterInput = {
-    create?: XOR<EquipmentCreateWithoutCharacterInput, EquipmentUncheckedCreateWithoutCharacterInput> | EquipmentCreateWithoutCharacterInput[] | EquipmentUncheckedCreateWithoutCharacterInput[]
-    connectOrCreate?: EquipmentCreateOrConnectWithoutCharacterInput | EquipmentCreateOrConnectWithoutCharacterInput[]
-    createMany?: EquipmentCreateManyCharacterInputEnvelope
-    connect?: EquipmentWhereUniqueInput | EquipmentWhereUniqueInput[]
+  export type EquipmentsUncheckedCreateNestedManyWithoutCharacterInput = {
+    create?: XOR<EquipmentsCreateWithoutCharacterInput, EquipmentsUncheckedCreateWithoutCharacterInput> | EquipmentsCreateWithoutCharacterInput[] | EquipmentsUncheckedCreateWithoutCharacterInput[]
+    connectOrCreate?: EquipmentsCreateOrConnectWithoutCharacterInput | EquipmentsCreateOrConnectWithoutCharacterInput[]
+    createMany?: EquipmentsCreateManyCharacterInputEnvelope
+    connect?: EquipmentsWhereUniqueInput | EquipmentsWhereUniqueInput[]
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -5791,88 +5845,88 @@ export namespace Prisma {
     update?: XOR<XOR<UsersUpdateToOneWithWhereWithoutCharactersInput, UsersUpdateWithoutCharactersInput>, UsersUncheckedUpdateWithoutCharactersInput>
   }
 
-  export type InventoryUpdateManyWithoutCharacterNestedInput = {
-    create?: XOR<InventoryCreateWithoutCharacterInput, InventoryUncheckedCreateWithoutCharacterInput> | InventoryCreateWithoutCharacterInput[] | InventoryUncheckedCreateWithoutCharacterInput[]
-    connectOrCreate?: InventoryCreateOrConnectWithoutCharacterInput | InventoryCreateOrConnectWithoutCharacterInput[]
-    upsert?: InventoryUpsertWithWhereUniqueWithoutCharacterInput | InventoryUpsertWithWhereUniqueWithoutCharacterInput[]
-    createMany?: InventoryCreateManyCharacterInputEnvelope
-    set?: InventoryWhereUniqueInput | InventoryWhereUniqueInput[]
-    disconnect?: InventoryWhereUniqueInput | InventoryWhereUniqueInput[]
-    delete?: InventoryWhereUniqueInput | InventoryWhereUniqueInput[]
-    connect?: InventoryWhereUniqueInput | InventoryWhereUniqueInput[]
-    update?: InventoryUpdateWithWhereUniqueWithoutCharacterInput | InventoryUpdateWithWhereUniqueWithoutCharacterInput[]
-    updateMany?: InventoryUpdateManyWithWhereWithoutCharacterInput | InventoryUpdateManyWithWhereWithoutCharacterInput[]
-    deleteMany?: InventoryScalarWhereInput | InventoryScalarWhereInput[]
+  export type InventorysUpdateManyWithoutCharacterNestedInput = {
+    create?: XOR<InventorysCreateWithoutCharacterInput, InventorysUncheckedCreateWithoutCharacterInput> | InventorysCreateWithoutCharacterInput[] | InventorysUncheckedCreateWithoutCharacterInput[]
+    connectOrCreate?: InventorysCreateOrConnectWithoutCharacterInput | InventorysCreateOrConnectWithoutCharacterInput[]
+    upsert?: InventorysUpsertWithWhereUniqueWithoutCharacterInput | InventorysUpsertWithWhereUniqueWithoutCharacterInput[]
+    createMany?: InventorysCreateManyCharacterInputEnvelope
+    set?: InventorysWhereUniqueInput | InventorysWhereUniqueInput[]
+    disconnect?: InventorysWhereUniqueInput | InventorysWhereUniqueInput[]
+    delete?: InventorysWhereUniqueInput | InventorysWhereUniqueInput[]
+    connect?: InventorysWhereUniqueInput | InventorysWhereUniqueInput[]
+    update?: InventorysUpdateWithWhereUniqueWithoutCharacterInput | InventorysUpdateWithWhereUniqueWithoutCharacterInput[]
+    updateMany?: InventorysUpdateManyWithWhereWithoutCharacterInput | InventorysUpdateManyWithWhereWithoutCharacterInput[]
+    deleteMany?: InventorysScalarWhereInput | InventorysScalarWhereInput[]
   }
 
-  export type EquipmentUpdateManyWithoutCharacterNestedInput = {
-    create?: XOR<EquipmentCreateWithoutCharacterInput, EquipmentUncheckedCreateWithoutCharacterInput> | EquipmentCreateWithoutCharacterInput[] | EquipmentUncheckedCreateWithoutCharacterInput[]
-    connectOrCreate?: EquipmentCreateOrConnectWithoutCharacterInput | EquipmentCreateOrConnectWithoutCharacterInput[]
-    upsert?: EquipmentUpsertWithWhereUniqueWithoutCharacterInput | EquipmentUpsertWithWhereUniqueWithoutCharacterInput[]
-    createMany?: EquipmentCreateManyCharacterInputEnvelope
-    set?: EquipmentWhereUniqueInput | EquipmentWhereUniqueInput[]
-    disconnect?: EquipmentWhereUniqueInput | EquipmentWhereUniqueInput[]
-    delete?: EquipmentWhereUniqueInput | EquipmentWhereUniqueInput[]
-    connect?: EquipmentWhereUniqueInput | EquipmentWhereUniqueInput[]
-    update?: EquipmentUpdateWithWhereUniqueWithoutCharacterInput | EquipmentUpdateWithWhereUniqueWithoutCharacterInput[]
-    updateMany?: EquipmentUpdateManyWithWhereWithoutCharacterInput | EquipmentUpdateManyWithWhereWithoutCharacterInput[]
-    deleteMany?: EquipmentScalarWhereInput | EquipmentScalarWhereInput[]
+  export type EquipmentsUpdateManyWithoutCharacterNestedInput = {
+    create?: XOR<EquipmentsCreateWithoutCharacterInput, EquipmentsUncheckedCreateWithoutCharacterInput> | EquipmentsCreateWithoutCharacterInput[] | EquipmentsUncheckedCreateWithoutCharacterInput[]
+    connectOrCreate?: EquipmentsCreateOrConnectWithoutCharacterInput | EquipmentsCreateOrConnectWithoutCharacterInput[]
+    upsert?: EquipmentsUpsertWithWhereUniqueWithoutCharacterInput | EquipmentsUpsertWithWhereUniqueWithoutCharacterInput[]
+    createMany?: EquipmentsCreateManyCharacterInputEnvelope
+    set?: EquipmentsWhereUniqueInput | EquipmentsWhereUniqueInput[]
+    disconnect?: EquipmentsWhereUniqueInput | EquipmentsWhereUniqueInput[]
+    delete?: EquipmentsWhereUniqueInput | EquipmentsWhereUniqueInput[]
+    connect?: EquipmentsWhereUniqueInput | EquipmentsWhereUniqueInput[]
+    update?: EquipmentsUpdateWithWhereUniqueWithoutCharacterInput | EquipmentsUpdateWithWhereUniqueWithoutCharacterInput[]
+    updateMany?: EquipmentsUpdateManyWithWhereWithoutCharacterInput | EquipmentsUpdateManyWithWhereWithoutCharacterInput[]
+    deleteMany?: EquipmentsScalarWhereInput | EquipmentsScalarWhereInput[]
   }
 
-  export type InventoryUncheckedUpdateManyWithoutCharacterNestedInput = {
-    create?: XOR<InventoryCreateWithoutCharacterInput, InventoryUncheckedCreateWithoutCharacterInput> | InventoryCreateWithoutCharacterInput[] | InventoryUncheckedCreateWithoutCharacterInput[]
-    connectOrCreate?: InventoryCreateOrConnectWithoutCharacterInput | InventoryCreateOrConnectWithoutCharacterInput[]
-    upsert?: InventoryUpsertWithWhereUniqueWithoutCharacterInput | InventoryUpsertWithWhereUniqueWithoutCharacterInput[]
-    createMany?: InventoryCreateManyCharacterInputEnvelope
-    set?: InventoryWhereUniqueInput | InventoryWhereUniqueInput[]
-    disconnect?: InventoryWhereUniqueInput | InventoryWhereUniqueInput[]
-    delete?: InventoryWhereUniqueInput | InventoryWhereUniqueInput[]
-    connect?: InventoryWhereUniqueInput | InventoryWhereUniqueInput[]
-    update?: InventoryUpdateWithWhereUniqueWithoutCharacterInput | InventoryUpdateWithWhereUniqueWithoutCharacterInput[]
-    updateMany?: InventoryUpdateManyWithWhereWithoutCharacterInput | InventoryUpdateManyWithWhereWithoutCharacterInput[]
-    deleteMany?: InventoryScalarWhereInput | InventoryScalarWhereInput[]
+  export type InventorysUncheckedUpdateManyWithoutCharacterNestedInput = {
+    create?: XOR<InventorysCreateWithoutCharacterInput, InventorysUncheckedCreateWithoutCharacterInput> | InventorysCreateWithoutCharacterInput[] | InventorysUncheckedCreateWithoutCharacterInput[]
+    connectOrCreate?: InventorysCreateOrConnectWithoutCharacterInput | InventorysCreateOrConnectWithoutCharacterInput[]
+    upsert?: InventorysUpsertWithWhereUniqueWithoutCharacterInput | InventorysUpsertWithWhereUniqueWithoutCharacterInput[]
+    createMany?: InventorysCreateManyCharacterInputEnvelope
+    set?: InventorysWhereUniqueInput | InventorysWhereUniqueInput[]
+    disconnect?: InventorysWhereUniqueInput | InventorysWhereUniqueInput[]
+    delete?: InventorysWhereUniqueInput | InventorysWhereUniqueInput[]
+    connect?: InventorysWhereUniqueInput | InventorysWhereUniqueInput[]
+    update?: InventorysUpdateWithWhereUniqueWithoutCharacterInput | InventorysUpdateWithWhereUniqueWithoutCharacterInput[]
+    updateMany?: InventorysUpdateManyWithWhereWithoutCharacterInput | InventorysUpdateManyWithWhereWithoutCharacterInput[]
+    deleteMany?: InventorysScalarWhereInput | InventorysScalarWhereInput[]
   }
 
-  export type EquipmentUncheckedUpdateManyWithoutCharacterNestedInput = {
-    create?: XOR<EquipmentCreateWithoutCharacterInput, EquipmentUncheckedCreateWithoutCharacterInput> | EquipmentCreateWithoutCharacterInput[] | EquipmentUncheckedCreateWithoutCharacterInput[]
-    connectOrCreate?: EquipmentCreateOrConnectWithoutCharacterInput | EquipmentCreateOrConnectWithoutCharacterInput[]
-    upsert?: EquipmentUpsertWithWhereUniqueWithoutCharacterInput | EquipmentUpsertWithWhereUniqueWithoutCharacterInput[]
-    createMany?: EquipmentCreateManyCharacterInputEnvelope
-    set?: EquipmentWhereUniqueInput | EquipmentWhereUniqueInput[]
-    disconnect?: EquipmentWhereUniqueInput | EquipmentWhereUniqueInput[]
-    delete?: EquipmentWhereUniqueInput | EquipmentWhereUniqueInput[]
-    connect?: EquipmentWhereUniqueInput | EquipmentWhereUniqueInput[]
-    update?: EquipmentUpdateWithWhereUniqueWithoutCharacterInput | EquipmentUpdateWithWhereUniqueWithoutCharacterInput[]
-    updateMany?: EquipmentUpdateManyWithWhereWithoutCharacterInput | EquipmentUpdateManyWithWhereWithoutCharacterInput[]
-    deleteMany?: EquipmentScalarWhereInput | EquipmentScalarWhereInput[]
+  export type EquipmentsUncheckedUpdateManyWithoutCharacterNestedInput = {
+    create?: XOR<EquipmentsCreateWithoutCharacterInput, EquipmentsUncheckedCreateWithoutCharacterInput> | EquipmentsCreateWithoutCharacterInput[] | EquipmentsUncheckedCreateWithoutCharacterInput[]
+    connectOrCreate?: EquipmentsCreateOrConnectWithoutCharacterInput | EquipmentsCreateOrConnectWithoutCharacterInput[]
+    upsert?: EquipmentsUpsertWithWhereUniqueWithoutCharacterInput | EquipmentsUpsertWithWhereUniqueWithoutCharacterInput[]
+    createMany?: EquipmentsCreateManyCharacterInputEnvelope
+    set?: EquipmentsWhereUniqueInput | EquipmentsWhereUniqueInput[]
+    disconnect?: EquipmentsWhereUniqueInput | EquipmentsWhereUniqueInput[]
+    delete?: EquipmentsWhereUniqueInput | EquipmentsWhereUniqueInput[]
+    connect?: EquipmentsWhereUniqueInput | EquipmentsWhereUniqueInput[]
+    update?: EquipmentsUpdateWithWhereUniqueWithoutCharacterInput | EquipmentsUpdateWithWhereUniqueWithoutCharacterInput[]
+    updateMany?: EquipmentsUpdateManyWithWhereWithoutCharacterInput | EquipmentsUpdateManyWithWhereWithoutCharacterInput[]
+    deleteMany?: EquipmentsScalarWhereInput | EquipmentsScalarWhereInput[]
   }
 
-  export type CharactersCreateNestedOneWithoutInventoryInput = {
-    create?: XOR<CharactersCreateWithoutInventoryInput, CharactersUncheckedCreateWithoutInventoryInput>
-    connectOrCreate?: CharactersCreateOrConnectWithoutInventoryInput
+  export type CharactersCreateNestedOneWithoutInventorysInput = {
+    create?: XOR<CharactersCreateWithoutInventorysInput, CharactersUncheckedCreateWithoutInventorysInput>
+    connectOrCreate?: CharactersCreateOrConnectWithoutInventorysInput
     connect?: CharactersWhereUniqueInput
   }
 
-  export type CharactersUpdateOneRequiredWithoutInventoryNestedInput = {
-    create?: XOR<CharactersCreateWithoutInventoryInput, CharactersUncheckedCreateWithoutInventoryInput>
-    connectOrCreate?: CharactersCreateOrConnectWithoutInventoryInput
-    upsert?: CharactersUpsertWithoutInventoryInput
+  export type CharactersUpdateOneRequiredWithoutInventorysNestedInput = {
+    create?: XOR<CharactersCreateWithoutInventorysInput, CharactersUncheckedCreateWithoutInventorysInput>
+    connectOrCreate?: CharactersCreateOrConnectWithoutInventorysInput
+    upsert?: CharactersUpsertWithoutInventorysInput
     connect?: CharactersWhereUniqueInput
-    update?: XOR<XOR<CharactersUpdateToOneWithWhereWithoutInventoryInput, CharactersUpdateWithoutInventoryInput>, CharactersUncheckedUpdateWithoutInventoryInput>
+    update?: XOR<XOR<CharactersUpdateToOneWithWhereWithoutInventorysInput, CharactersUpdateWithoutInventorysInput>, CharactersUncheckedUpdateWithoutInventorysInput>
   }
 
-  export type CharactersCreateNestedOneWithoutEquipmentInput = {
-    create?: XOR<CharactersCreateWithoutEquipmentInput, CharactersUncheckedCreateWithoutEquipmentInput>
-    connectOrCreate?: CharactersCreateOrConnectWithoutEquipmentInput
+  export type CharactersCreateNestedOneWithoutEquipmentsInput = {
+    create?: XOR<CharactersCreateWithoutEquipmentsInput, CharactersUncheckedCreateWithoutEquipmentsInput>
+    connectOrCreate?: CharactersCreateOrConnectWithoutEquipmentsInput
     connect?: CharactersWhereUniqueInput
   }
 
-  export type CharactersUpdateOneRequiredWithoutEquipmentNestedInput = {
-    create?: XOR<CharactersCreateWithoutEquipmentInput, CharactersUncheckedCreateWithoutEquipmentInput>
-    connectOrCreate?: CharactersCreateOrConnectWithoutEquipmentInput
-    upsert?: CharactersUpsertWithoutEquipmentInput
+  export type CharactersUpdateOneRequiredWithoutEquipmentsNestedInput = {
+    create?: XOR<CharactersCreateWithoutEquipmentsInput, CharactersUncheckedCreateWithoutEquipmentsInput>
+    connectOrCreate?: CharactersCreateOrConnectWithoutEquipmentsInput
+    upsert?: CharactersUpsertWithoutEquipmentsInput
     connect?: CharactersWhereUniqueInput
-    update?: XOR<XOR<CharactersUpdateToOneWithWhereWithoutEquipmentInput, CharactersUpdateWithoutEquipmentInput>, CharactersUncheckedUpdateWithoutEquipmentInput>
+    update?: XOR<XOR<CharactersUpdateToOneWithWhereWithoutEquipmentsInput, CharactersUpdateWithoutEquipmentsInput>, CharactersUncheckedUpdateWithoutEquipmentsInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -5949,8 +6003,8 @@ export namespace Prisma {
     health?: number
     power?: number
     money?: number
-    Inventory?: InventoryCreateNestedManyWithoutCharacterInput
-    Equipment?: EquipmentCreateNestedManyWithoutCharacterInput
+    Inventorys?: InventorysCreateNestedManyWithoutCharacterInput
+    Equipments?: EquipmentsCreateNestedManyWithoutCharacterInput
   }
 
   export type CharactersUncheckedCreateWithoutUserInput = {
@@ -5959,8 +6013,8 @@ export namespace Prisma {
     health?: number
     power?: number
     money?: number
-    Inventory?: InventoryUncheckedCreateNestedManyWithoutCharacterInput
-    Equipment?: EquipmentUncheckedCreateNestedManyWithoutCharacterInput
+    Inventorys?: InventorysUncheckedCreateNestedManyWithoutCharacterInput
+    Equipments?: EquipmentsUncheckedCreateNestedManyWithoutCharacterInput
   }
 
   export type CharactersCreateOrConnectWithoutUserInput = {
@@ -6018,43 +6072,47 @@ export namespace Prisma {
     create: XOR<UsersCreateWithoutCharactersInput, UsersUncheckedCreateWithoutCharactersInput>
   }
 
-  export type InventoryCreateWithoutCharacterInput = {
+  export type InventorysCreateWithoutCharacterInput = {
     item_code: number
+    item_name: string
     count: number
   }
 
-  export type InventoryUncheckedCreateWithoutCharacterInput = {
+  export type InventorysUncheckedCreateWithoutCharacterInput = {
     inventory_id?: number
     item_code: number
+    item_name: string
     count: number
   }
 
-  export type InventoryCreateOrConnectWithoutCharacterInput = {
-    where: InventoryWhereUniqueInput
-    create: XOR<InventoryCreateWithoutCharacterInput, InventoryUncheckedCreateWithoutCharacterInput>
+  export type InventorysCreateOrConnectWithoutCharacterInput = {
+    where: InventorysWhereUniqueInput
+    create: XOR<InventorysCreateWithoutCharacterInput, InventorysUncheckedCreateWithoutCharacterInput>
   }
 
-  export type InventoryCreateManyCharacterInputEnvelope = {
-    data: InventoryCreateManyCharacterInput | InventoryCreateManyCharacterInput[]
+  export type InventorysCreateManyCharacterInputEnvelope = {
+    data: InventorysCreateManyCharacterInput | InventorysCreateManyCharacterInput[]
     skipDuplicates?: boolean
   }
 
-  export type EquipmentCreateWithoutCharacterInput = {
+  export type EquipmentsCreateWithoutCharacterInput = {
     item_code: number
+    item_name: string
   }
 
-  export type EquipmentUncheckedCreateWithoutCharacterInput = {
+  export type EquipmentsUncheckedCreateWithoutCharacterInput = {
     equipment_id?: number
     item_code: number
+    item_name: string
   }
 
-  export type EquipmentCreateOrConnectWithoutCharacterInput = {
-    where: EquipmentWhereUniqueInput
-    create: XOR<EquipmentCreateWithoutCharacterInput, EquipmentUncheckedCreateWithoutCharacterInput>
+  export type EquipmentsCreateOrConnectWithoutCharacterInput = {
+    where: EquipmentsWhereUniqueInput
+    create: XOR<EquipmentsCreateWithoutCharacterInput, EquipmentsUncheckedCreateWithoutCharacterInput>
   }
 
-  export type EquipmentCreateManyCharacterInputEnvelope = {
-    data: EquipmentCreateManyCharacterInput | EquipmentCreateManyCharacterInput[]
+  export type EquipmentsCreateManyCharacterInputEnvelope = {
+    data: EquipmentsCreateManyCharacterInput | EquipmentsCreateManyCharacterInput[]
     skipDuplicates?: boolean
   }
 
@@ -6081,163 +6139,165 @@ export namespace Prisma {
     user_name?: StringFieldUpdateOperationsInput | string
   }
 
-  export type InventoryUpsertWithWhereUniqueWithoutCharacterInput = {
-    where: InventoryWhereUniqueInput
-    update: XOR<InventoryUpdateWithoutCharacterInput, InventoryUncheckedUpdateWithoutCharacterInput>
-    create: XOR<InventoryCreateWithoutCharacterInput, InventoryUncheckedCreateWithoutCharacterInput>
+  export type InventorysUpsertWithWhereUniqueWithoutCharacterInput = {
+    where: InventorysWhereUniqueInput
+    update: XOR<InventorysUpdateWithoutCharacterInput, InventorysUncheckedUpdateWithoutCharacterInput>
+    create: XOR<InventorysCreateWithoutCharacterInput, InventorysUncheckedCreateWithoutCharacterInput>
   }
 
-  export type InventoryUpdateWithWhereUniqueWithoutCharacterInput = {
-    where: InventoryWhereUniqueInput
-    data: XOR<InventoryUpdateWithoutCharacterInput, InventoryUncheckedUpdateWithoutCharacterInput>
+  export type InventorysUpdateWithWhereUniqueWithoutCharacterInput = {
+    where: InventorysWhereUniqueInput
+    data: XOR<InventorysUpdateWithoutCharacterInput, InventorysUncheckedUpdateWithoutCharacterInput>
   }
 
-  export type InventoryUpdateManyWithWhereWithoutCharacterInput = {
-    where: InventoryScalarWhereInput
-    data: XOR<InventoryUpdateManyMutationInput, InventoryUncheckedUpdateManyWithoutCharacterInput>
+  export type InventorysUpdateManyWithWhereWithoutCharacterInput = {
+    where: InventorysScalarWhereInput
+    data: XOR<InventorysUpdateManyMutationInput, InventorysUncheckedUpdateManyWithoutCharacterInput>
   }
 
-  export type InventoryScalarWhereInput = {
-    AND?: InventoryScalarWhereInput | InventoryScalarWhereInput[]
-    OR?: InventoryScalarWhereInput[]
-    NOT?: InventoryScalarWhereInput | InventoryScalarWhereInput[]
-    inventory_id?: IntFilter<"Inventory"> | number
-    Character_id?: IntFilter<"Inventory"> | number
-    item_code?: IntFilter<"Inventory"> | number
-    count?: IntFilter<"Inventory"> | number
+  export type InventorysScalarWhereInput = {
+    AND?: InventorysScalarWhereInput | InventorysScalarWhereInput[]
+    OR?: InventorysScalarWhereInput[]
+    NOT?: InventorysScalarWhereInput | InventorysScalarWhereInput[]
+    inventory_id?: IntFilter<"Inventorys"> | number
+    Character_id?: IntFilter<"Inventorys"> | number
+    item_code?: IntFilter<"Inventorys"> | number
+    item_name?: StringFilter<"Inventorys"> | string
+    count?: IntFilter<"Inventorys"> | number
   }
 
-  export type EquipmentUpsertWithWhereUniqueWithoutCharacterInput = {
-    where: EquipmentWhereUniqueInput
-    update: XOR<EquipmentUpdateWithoutCharacterInput, EquipmentUncheckedUpdateWithoutCharacterInput>
-    create: XOR<EquipmentCreateWithoutCharacterInput, EquipmentUncheckedCreateWithoutCharacterInput>
+  export type EquipmentsUpsertWithWhereUniqueWithoutCharacterInput = {
+    where: EquipmentsWhereUniqueInput
+    update: XOR<EquipmentsUpdateWithoutCharacterInput, EquipmentsUncheckedUpdateWithoutCharacterInput>
+    create: XOR<EquipmentsCreateWithoutCharacterInput, EquipmentsUncheckedCreateWithoutCharacterInput>
   }
 
-  export type EquipmentUpdateWithWhereUniqueWithoutCharacterInput = {
-    where: EquipmentWhereUniqueInput
-    data: XOR<EquipmentUpdateWithoutCharacterInput, EquipmentUncheckedUpdateWithoutCharacterInput>
+  export type EquipmentsUpdateWithWhereUniqueWithoutCharacterInput = {
+    where: EquipmentsWhereUniqueInput
+    data: XOR<EquipmentsUpdateWithoutCharacterInput, EquipmentsUncheckedUpdateWithoutCharacterInput>
   }
 
-  export type EquipmentUpdateManyWithWhereWithoutCharacterInput = {
-    where: EquipmentScalarWhereInput
-    data: XOR<EquipmentUpdateManyMutationInput, EquipmentUncheckedUpdateManyWithoutCharacterInput>
+  export type EquipmentsUpdateManyWithWhereWithoutCharacterInput = {
+    where: EquipmentsScalarWhereInput
+    data: XOR<EquipmentsUpdateManyMutationInput, EquipmentsUncheckedUpdateManyWithoutCharacterInput>
   }
 
-  export type EquipmentScalarWhereInput = {
-    AND?: EquipmentScalarWhereInput | EquipmentScalarWhereInput[]
-    OR?: EquipmentScalarWhereInput[]
-    NOT?: EquipmentScalarWhereInput | EquipmentScalarWhereInput[]
-    equipment_id?: IntFilter<"Equipment"> | number
-    Character_id?: IntFilter<"Equipment"> | number
-    item_code?: IntFilter<"Equipment"> | number
+  export type EquipmentsScalarWhereInput = {
+    AND?: EquipmentsScalarWhereInput | EquipmentsScalarWhereInput[]
+    OR?: EquipmentsScalarWhereInput[]
+    NOT?: EquipmentsScalarWhereInput | EquipmentsScalarWhereInput[]
+    equipment_id?: IntFilter<"Equipments"> | number
+    Character_id?: IntFilter<"Equipments"> | number
+    item_code?: IntFilter<"Equipments"> | number
+    item_name?: StringFilter<"Equipments"> | string
   }
 
-  export type CharactersCreateWithoutInventoryInput = {
+  export type CharactersCreateWithoutInventorysInput = {
     character_name: string
     health?: number
     power?: number
     money?: number
     User: UsersCreateNestedOneWithoutCharactersInput
-    Equipment?: EquipmentCreateNestedManyWithoutCharacterInput
+    Equipments?: EquipmentsCreateNestedManyWithoutCharacterInput
   }
 
-  export type CharactersUncheckedCreateWithoutInventoryInput = {
+  export type CharactersUncheckedCreateWithoutInventorysInput = {
     character_id?: number
     User_id: string
     character_name: string
     health?: number
     power?: number
     money?: number
-    Equipment?: EquipmentUncheckedCreateNestedManyWithoutCharacterInput
+    Equipments?: EquipmentsUncheckedCreateNestedManyWithoutCharacterInput
   }
 
-  export type CharactersCreateOrConnectWithoutInventoryInput = {
+  export type CharactersCreateOrConnectWithoutInventorysInput = {
     where: CharactersWhereUniqueInput
-    create: XOR<CharactersCreateWithoutInventoryInput, CharactersUncheckedCreateWithoutInventoryInput>
+    create: XOR<CharactersCreateWithoutInventorysInput, CharactersUncheckedCreateWithoutInventorysInput>
   }
 
-  export type CharactersUpsertWithoutInventoryInput = {
-    update: XOR<CharactersUpdateWithoutInventoryInput, CharactersUncheckedUpdateWithoutInventoryInput>
-    create: XOR<CharactersCreateWithoutInventoryInput, CharactersUncheckedCreateWithoutInventoryInput>
+  export type CharactersUpsertWithoutInventorysInput = {
+    update: XOR<CharactersUpdateWithoutInventorysInput, CharactersUncheckedUpdateWithoutInventorysInput>
+    create: XOR<CharactersCreateWithoutInventorysInput, CharactersUncheckedCreateWithoutInventorysInput>
     where?: CharactersWhereInput
   }
 
-  export type CharactersUpdateToOneWithWhereWithoutInventoryInput = {
+  export type CharactersUpdateToOneWithWhereWithoutInventorysInput = {
     where?: CharactersWhereInput
-    data: XOR<CharactersUpdateWithoutInventoryInput, CharactersUncheckedUpdateWithoutInventoryInput>
+    data: XOR<CharactersUpdateWithoutInventorysInput, CharactersUncheckedUpdateWithoutInventorysInput>
   }
 
-  export type CharactersUpdateWithoutInventoryInput = {
+  export type CharactersUpdateWithoutInventorysInput = {
     character_name?: StringFieldUpdateOperationsInput | string
     health?: IntFieldUpdateOperationsInput | number
     power?: IntFieldUpdateOperationsInput | number
     money?: IntFieldUpdateOperationsInput | number
     User?: UsersUpdateOneRequiredWithoutCharactersNestedInput
-    Equipment?: EquipmentUpdateManyWithoutCharacterNestedInput
+    Equipments?: EquipmentsUpdateManyWithoutCharacterNestedInput
   }
 
-  export type CharactersUncheckedUpdateWithoutInventoryInput = {
+  export type CharactersUncheckedUpdateWithoutInventorysInput = {
     character_id?: IntFieldUpdateOperationsInput | number
     User_id?: StringFieldUpdateOperationsInput | string
     character_name?: StringFieldUpdateOperationsInput | string
     health?: IntFieldUpdateOperationsInput | number
     power?: IntFieldUpdateOperationsInput | number
     money?: IntFieldUpdateOperationsInput | number
-    Equipment?: EquipmentUncheckedUpdateManyWithoutCharacterNestedInput
+    Equipments?: EquipmentsUncheckedUpdateManyWithoutCharacterNestedInput
   }
 
-  export type CharactersCreateWithoutEquipmentInput = {
+  export type CharactersCreateWithoutEquipmentsInput = {
     character_name: string
     health?: number
     power?: number
     money?: number
     User: UsersCreateNestedOneWithoutCharactersInput
-    Inventory?: InventoryCreateNestedManyWithoutCharacterInput
+    Inventorys?: InventorysCreateNestedManyWithoutCharacterInput
   }
 
-  export type CharactersUncheckedCreateWithoutEquipmentInput = {
+  export type CharactersUncheckedCreateWithoutEquipmentsInput = {
     character_id?: number
     User_id: string
     character_name: string
     health?: number
     power?: number
     money?: number
-    Inventory?: InventoryUncheckedCreateNestedManyWithoutCharacterInput
+    Inventorys?: InventorysUncheckedCreateNestedManyWithoutCharacterInput
   }
 
-  export type CharactersCreateOrConnectWithoutEquipmentInput = {
+  export type CharactersCreateOrConnectWithoutEquipmentsInput = {
     where: CharactersWhereUniqueInput
-    create: XOR<CharactersCreateWithoutEquipmentInput, CharactersUncheckedCreateWithoutEquipmentInput>
+    create: XOR<CharactersCreateWithoutEquipmentsInput, CharactersUncheckedCreateWithoutEquipmentsInput>
   }
 
-  export type CharactersUpsertWithoutEquipmentInput = {
-    update: XOR<CharactersUpdateWithoutEquipmentInput, CharactersUncheckedUpdateWithoutEquipmentInput>
-    create: XOR<CharactersCreateWithoutEquipmentInput, CharactersUncheckedCreateWithoutEquipmentInput>
+  export type CharactersUpsertWithoutEquipmentsInput = {
+    update: XOR<CharactersUpdateWithoutEquipmentsInput, CharactersUncheckedUpdateWithoutEquipmentsInput>
+    create: XOR<CharactersCreateWithoutEquipmentsInput, CharactersUncheckedCreateWithoutEquipmentsInput>
     where?: CharactersWhereInput
   }
 
-  export type CharactersUpdateToOneWithWhereWithoutEquipmentInput = {
+  export type CharactersUpdateToOneWithWhereWithoutEquipmentsInput = {
     where?: CharactersWhereInput
-    data: XOR<CharactersUpdateWithoutEquipmentInput, CharactersUncheckedUpdateWithoutEquipmentInput>
+    data: XOR<CharactersUpdateWithoutEquipmentsInput, CharactersUncheckedUpdateWithoutEquipmentsInput>
   }
 
-  export type CharactersUpdateWithoutEquipmentInput = {
+  export type CharactersUpdateWithoutEquipmentsInput = {
     character_name?: StringFieldUpdateOperationsInput | string
     health?: IntFieldUpdateOperationsInput | number
     power?: IntFieldUpdateOperationsInput | number
     money?: IntFieldUpdateOperationsInput | number
     User?: UsersUpdateOneRequiredWithoutCharactersNestedInput
-    Inventory?: InventoryUpdateManyWithoutCharacterNestedInput
+    Inventorys?: InventorysUpdateManyWithoutCharacterNestedInput
   }
 
-  export type CharactersUncheckedUpdateWithoutEquipmentInput = {
+  export type CharactersUncheckedUpdateWithoutEquipmentsInput = {
     character_id?: IntFieldUpdateOperationsInput | number
     User_id?: StringFieldUpdateOperationsInput | string
     character_name?: StringFieldUpdateOperationsInput | string
     health?: IntFieldUpdateOperationsInput | number
     power?: IntFieldUpdateOperationsInput | number
     money?: IntFieldUpdateOperationsInput | number
-    Inventory?: InventoryUncheckedUpdateManyWithoutCharacterNestedInput
+    Inventorys?: InventorysUncheckedUpdateManyWithoutCharacterNestedInput
   }
 
   export type CharactersCreateManyUserInput = {
@@ -6253,8 +6313,8 @@ export namespace Prisma {
     health?: IntFieldUpdateOperationsInput | number
     power?: IntFieldUpdateOperationsInput | number
     money?: IntFieldUpdateOperationsInput | number
-    Inventory?: InventoryUpdateManyWithoutCharacterNestedInput
-    Equipment?: EquipmentUpdateManyWithoutCharacterNestedInput
+    Inventorys?: InventorysUpdateManyWithoutCharacterNestedInput
+    Equipments?: EquipmentsUpdateManyWithoutCharacterNestedInput
   }
 
   export type CharactersUncheckedUpdateWithoutUserInput = {
@@ -6263,8 +6323,8 @@ export namespace Prisma {
     health?: IntFieldUpdateOperationsInput | number
     power?: IntFieldUpdateOperationsInput | number
     money?: IntFieldUpdateOperationsInput | number
-    Inventory?: InventoryUncheckedUpdateManyWithoutCharacterNestedInput
-    Equipment?: EquipmentUncheckedUpdateManyWithoutCharacterNestedInput
+    Inventorys?: InventorysUncheckedUpdateManyWithoutCharacterNestedInput
+    Equipments?: EquipmentsUncheckedUpdateManyWithoutCharacterNestedInput
   }
 
   export type CharactersUncheckedUpdateManyWithoutUserInput = {
@@ -6275,46 +6335,54 @@ export namespace Prisma {
     money?: IntFieldUpdateOperationsInput | number
   }
 
-  export type InventoryCreateManyCharacterInput = {
+  export type InventorysCreateManyCharacterInput = {
     inventory_id?: number
     item_code: number
+    item_name: string
     count: number
   }
 
-  export type EquipmentCreateManyCharacterInput = {
+  export type EquipmentsCreateManyCharacterInput = {
     equipment_id?: number
     item_code: number
+    item_name: string
   }
 
-  export type InventoryUpdateWithoutCharacterInput = {
+  export type InventorysUpdateWithoutCharacterInput = {
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
-  export type InventoryUncheckedUpdateWithoutCharacterInput = {
+  export type InventorysUncheckedUpdateWithoutCharacterInput = {
     inventory_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
-  export type InventoryUncheckedUpdateManyWithoutCharacterInput = {
+  export type InventorysUncheckedUpdateManyWithoutCharacterInput = {
     inventory_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
     count?: IntFieldUpdateOperationsInput | number
   }
 
-  export type EquipmentUpdateWithoutCharacterInput = {
+  export type EquipmentsUpdateWithoutCharacterInput = {
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
   }
 
-  export type EquipmentUncheckedUpdateWithoutCharacterInput = {
+  export type EquipmentsUncheckedUpdateWithoutCharacterInput = {
     equipment_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
   }
 
-  export type EquipmentUncheckedUpdateManyWithoutCharacterInput = {
+  export type EquipmentsUncheckedUpdateManyWithoutCharacterInput = {
     equipment_id?: IntFieldUpdateOperationsInput | number
     item_code?: IntFieldUpdateOperationsInput | number
+    item_name?: StringFieldUpdateOperationsInput | string
   }
 
 
@@ -6339,13 +6407,13 @@ export namespace Prisma {
      */
     export type CharactersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = CharactersDefaultArgs<ExtArgs>
     /**
-     * @deprecated Use InventoryDefaultArgs instead
+     * @deprecated Use InventorysDefaultArgs instead
      */
-    export type InventoryArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = InventoryDefaultArgs<ExtArgs>
+    export type InventorysArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = InventorysDefaultArgs<ExtArgs>
     /**
-     * @deprecated Use EquipmentDefaultArgs instead
+     * @deprecated Use EquipmentsDefaultArgs instead
      */
-    export type EquipmentArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = EquipmentDefaultArgs<ExtArgs>
+    export type EquipmentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = EquipmentsDefaultArgs<ExtArgs>
 
   /**
    * Batch Payload for updateMany & deleteMany & createMany

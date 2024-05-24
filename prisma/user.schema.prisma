@@ -33,29 +33,31 @@ model Characters {
     money           Int             @default(10000)             @map("money")
 
     User Users  @relation(fields: [User_id], references: [user_id], onDelete: Cascade)
-    Inventory   Inventory[]
-    Equipment   Equipment[]
+    Inventorys   Inventorys[]
+    Equipments   Equipments[]
 
     @@map("Characters")
 }
 
-model Inventory {
+model Inventorys {
     inventory_id    Int     @id     @default(autoincrement())   @map("inventory_id")
     Character_id    Int                                         @map("Character_id")
-    item_code       Int                                         @map("item_code")
+    item_code       Int     @unique                             @map("item_code")
+    item_name       String  @unique                             @map("item_name")
     count           Int                                         @map("count")
 
     Character Characters @relation(fields: [Character_id], references: [character_id], onDelete: Cascade)
 
-    @@map("Inventory")
+    @@map("Inventorys")
 }
 
-model Equipment {
+model Equipments {
     equipment_id    Int     @id     @default(autoincrement())   @map("equipment_id")
     Character_id    Int                                         @map("Character_id")
-    item_code       Int                                         @map("item_code")
+    item_code       Int     @unique                             @map("item_code")
+    item_name       String  @unique                             @map("item_name")
 
     Character Characters @relation(fields: [Character_id], references: [character_id], onDelete: Cascade)
 
-    @@map("Equipment")
+    @@map("Equipments")
 }
