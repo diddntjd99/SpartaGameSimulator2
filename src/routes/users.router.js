@@ -10,6 +10,12 @@ router.post('/sign-up', async (req, res, next) => {
   try {
     const { user_id, user_pw, user_pw_check, user_name } = req.body;
 
+    if (!user_id || !user_pw || !user_pw_check || !user_name) {
+      return res
+        .status(400)
+        .json({ message: '데이터를 올바르게 입력해주세요.' });
+    }
+
     //소문자 + 숫자 vaildation
     const idVaildation = /^[a-z0-9]+$/;
     if (!idVaildation.test(user_id)) {
@@ -70,6 +76,11 @@ router.post('/sign-up', async (req, res, next) => {
 router.post('/sign-in', async (req, res, next) => {
   try {
     const { user_id, user_pw } = req.body;
+    if (!user_id || !user_pw) {
+      return res
+        .status(400)
+        .json({ message: '데이터를 올바르게 입력해주세요.' });
+    }
 
     const user = await userPrisma.users.findFirst({
       where: {
@@ -81,7 +92,7 @@ router.post('/sign-in', async (req, res, next) => {
     }
 
     if (!(await bcrypt.compare(user_pw, user.user_pw))) {
-      return res.status(401).json({ message: '비밀번호가 일치하지 않습니다.' });
+      return res.status(400).json({ message: '비밀번호가 일치하지 않습니다.' });
     }
 
     const token = jwt.sign(
