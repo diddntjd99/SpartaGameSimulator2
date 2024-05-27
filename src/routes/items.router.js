@@ -20,6 +20,17 @@ router.post('/items', async (req, res, next) => {
         .json({ message: '아이템 스탯 데이터가 존재하지 않습니다.' });
     }
 
+    // health와 power의 값이 숫자인지 검증
+    const vaildation = /^-?\d+(\.\d+)?$/;
+    if (
+      !vaildation.test(item_stat.health) ||
+      !vaildation.test(item_stat.power)
+    ) {
+      return res
+        .status(400)
+        .json({ message: '아이템 스탯은 숫자로 입력해주세요.' });
+    }
+
     const item = await gamePrisma.items.findFirst({
       where: {
         item_name,
@@ -58,6 +69,17 @@ router.patch('/items/:item_code', async (req, res, next) => {
       return res
         .status(400)
         .json({ message: '아이템 스탯 데이터가 존재하지 않습니다.' });
+    }
+
+    // health와 power의 값이 숫자인지 검증
+    const vaildation = /^-?\d+(\.\d+)?$/;
+    if (
+      !vaildation.test(item_stat.health) ||
+      !vaildation.test(item_stat.power)
+    ) {
+      return res
+        .status(400)
+        .json({ message: '아이템 스탯은 숫자로 입력해주세요.' });
     }
 
     const item = await gamePrisma.items.findFirst({
